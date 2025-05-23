@@ -40,6 +40,31 @@ namespace TechMoto
             {
                 new Classes.Cliente
                 {
+                    Nome = "Rafael Vieira",
+                    CPF = "538.972.328-71",
+                    Email = "c",
+                    Senha = "c",
+                    Cidade = "Xique Xique",
+                    Bairro = "Centro",
+                    Rua = "Rua Exemplo, 123",
+                    Nivel = Classes.UsuarioNivel.Cliente,
+                    MotosComInteresse = 15
+                },
+                new Classes.Loja
+                {
+                    Nome = "Loja do Rafa",
+                    CPF = "987.654.321-00",
+                    Email = "l",
+                    Senha = "l",
+                    Cidade = "Xique Xique",
+                    Bairro = "Centro",
+                    Rua = "Avenida das Motos, 100",
+                    Nivel = Classes.UsuarioNivel.Loja,
+                    MotosEmEstoque = 20
+                },
+
+                new Classes.Cliente
+                {
                     Nome = "Travis Scott",
                     CPF = "777.777.777-77",
                     Email = "travis@gmail.com",

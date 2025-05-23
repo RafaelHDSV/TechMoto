@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace TechMoto
 {
-
     public partial class frmMain : Form
     {
         private Classes.Usuario usuarioLogado;
