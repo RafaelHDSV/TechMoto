@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracaoUsuario));
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nivelInput = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cpfInput = new System.Windows.Forms.MaskedTextBox();
             this.ruaInput = new System.Windows.Forms.TextBox();
             this.bairroInput = new System.Windows.Forms.TextBox();
@@ -44,8 +47,6 @@
             this.senhaInput = new System.Windows.Forms.TextBox();
             this.emailInput = new System.Windows.Forms.TextBox();
             this.nameInput = new System.Windows.Forms.TextBox();
-            this.nivelInput = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,80 +134,13 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(303, 101);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(472, 369);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuração de Usuário";
-            // 
-            // cpfInput
-            // 
-            this.cpfInput.Location = new System.Drawing.Point(191, 87);
-            this.cpfInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cpfInput.Mask = "000.000.000-00";
-            this.cpfInput.Name = "cpfInput";
-            this.cpfInput.Size = new System.Drawing.Size(160, 22);
-            this.cpfInput.TabIndex = 14;
-            // 
-            // ruaInput
-            // 
-            this.ruaInput.Location = new System.Drawing.Point(191, 294);
-            this.ruaInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ruaInput.Name = "ruaInput";
-            this.ruaInput.Size = new System.Drawing.Size(160, 22);
-            this.ruaInput.TabIndex = 13;
-            // 
-            // bairroInput
-            // 
-            this.bairroInput.Location = new System.Drawing.Point(191, 251);
-            this.bairroInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bairroInput.Name = "bairroInput";
-            this.bairroInput.Size = new System.Drawing.Size(160, 22);
-            this.bairroInput.TabIndex = 6;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(133, 181);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 16);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Senha:";
-            // 
-            // cidadeInput
-            // 
-            this.cidadeInput.Location = new System.Drawing.Point(191, 213);
-            this.cidadeInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cidadeInput.Name = "cidadeInput";
-            this.cidadeInput.Size = new System.Drawing.Size(160, 22);
-            this.cidadeInput.TabIndex = 5;
-            // 
-            // senhaInput
-            // 
-            this.senhaInput.Location = new System.Drawing.Point(191, 172);
-            this.senhaInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.senhaInput.Name = "senhaInput";
-            this.senhaInput.Size = new System.Drawing.Size(160, 22);
-            this.senhaInput.TabIndex = 4;
-            // 
-            // emailInput
-            // 
-            this.emailInput.Location = new System.Drawing.Point(191, 128);
-            this.emailInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.emailInput.Name = "emailInput";
-            this.emailInput.Size = new System.Drawing.Size(160, 22);
-            this.emailInput.TabIndex = 3;
-            // 
-            // nameInput
-            // 
-            this.nameInput.Location = new System.Drawing.Point(191, 48);
-            this.nameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nameInput.Name = "nameInput";
-            this.nameInput.Size = new System.Drawing.Size(160, 22);
-            this.nameInput.TabIndex = 1;
             // 
             // nivelInput
             // 
@@ -226,13 +160,81 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Nível:";
             // 
+            // cpfInput
+            // 
+            this.cpfInput.Location = new System.Drawing.Point(191, 87);
+            this.cpfInput.Margin = new System.Windows.Forms.Padding(4);
+            this.cpfInput.Mask = "000.000.000-00";
+            this.cpfInput.Name = "cpfInput";
+            this.cpfInput.Size = new System.Drawing.Size(160, 22);
+            this.cpfInput.TabIndex = 14;
+            // 
+            // ruaInput
+            // 
+            this.ruaInput.Location = new System.Drawing.Point(191, 294);
+            this.ruaInput.Margin = new System.Windows.Forms.Padding(4);
+            this.ruaInput.Name = "ruaInput";
+            this.ruaInput.Size = new System.Drawing.Size(160, 22);
+            this.ruaInput.TabIndex = 13;
+            // 
+            // bairroInput
+            // 
+            this.bairroInput.Location = new System.Drawing.Point(191, 251);
+            this.bairroInput.Margin = new System.Windows.Forms.Padding(4);
+            this.bairroInput.Name = "bairroInput";
+            this.bairroInput.Size = new System.Drawing.Size(160, 22);
+            this.bairroInput.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(133, 181);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 16);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Senha:";
+            // 
+            // cidadeInput
+            // 
+            this.cidadeInput.Location = new System.Drawing.Point(191, 213);
+            this.cidadeInput.Margin = new System.Windows.Forms.Padding(4);
+            this.cidadeInput.Name = "cidadeInput";
+            this.cidadeInput.Size = new System.Drawing.Size(160, 22);
+            this.cidadeInput.TabIndex = 5;
+            // 
+            // senhaInput
+            // 
+            this.senhaInput.Location = new System.Drawing.Point(191, 172);
+            this.senhaInput.Margin = new System.Windows.Forms.Padding(4);
+            this.senhaInput.Name = "senhaInput";
+            this.senhaInput.Size = new System.Drawing.Size(160, 22);
+            this.senhaInput.TabIndex = 4;
+            // 
+            // emailInput
+            // 
+            this.emailInput.Location = new System.Drawing.Point(191, 128);
+            this.emailInput.Margin = new System.Windows.Forms.Padding(4);
+            this.emailInput.Name = "emailInput";
+            this.emailInput.Size = new System.Drawing.Size(160, 22);
+            this.emailInput.TabIndex = 3;
+            // 
+            // nameInput
+            // 
+            this.nameInput.Location = new System.Drawing.Point(191, 48);
+            this.nameInput.Margin = new System.Windows.Forms.Padding(4);
+            this.nameInput.Name = "nameInput";
+            this.nameInput.Size = new System.Drawing.Size(160, 22);
+            this.nameInput.TabIndex = 1;
+            // 
             // frmConfiguracaoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfiguracaoUsuario";
             this.Text = "Configuração de Usuário";
             this.groupBox1.ResumeLayout(false);
