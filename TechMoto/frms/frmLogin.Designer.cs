@@ -40,10 +40,10 @@
             // 
             // inputEmail
             // 
-            this.inputEmail.Location = new System.Drawing.Point(67, 110);
-            this.inputEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputEmail.Location = new System.Drawing.Point(50, 92);
+            this.inputEmail.Margin = new System.Windows.Forms.Padding(4);
             this.inputEmail.Name = "inputEmail";
-            this.inputEmail.Size = new System.Drawing.Size(132, 22);
+            this.inputEmail.Size = new System.Drawing.Size(250, 22);
             this.inputEmail.TabIndex = 0;
             // 
             // groupBox1
@@ -54,11 +54,11 @@
             this.groupBox1.Controls.Add(this.btnEntrar);
             this.groupBox1.Controls.Add(this.inputSenha);
             this.groupBox1.Controls.Add(this.inputEmail);
-            this.groupBox1.Location = new System.Drawing.Point(381, 87);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(338, 76);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(267, 370);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(375, 370);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 171);
+            this.label2.Location = new System.Drawing.Point(48, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 16);
@@ -76,7 +76,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 90);
+            this.label1.Location = new System.Drawing.Point(51, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
@@ -85,8 +85,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(67, 290);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEntrar.Location = new System.Drawing.Point(109, 267);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(133, 39);
             this.btnEntrar.TabIndex = 2;
@@ -96,11 +96,11 @@
             // 
             // inputSenha
             // 
-            this.inputSenha.Location = new System.Drawing.Point(67, 191);
-            this.inputSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputSenha.Location = new System.Drawing.Point(50, 164);
+            this.inputSenha.Margin = new System.Windows.Forms.Padding(4);
             this.inputSenha.Name = "inputSenha";
             this.inputSenha.PasswordChar = '*';
-            this.inputSenha.Size = new System.Drawing.Size(132, 22);
+            this.inputSenha.Size = new System.Drawing.Size(250, 22);
             this.inputSenha.TabIndex = 1;
             // 
             // frmLogin
@@ -110,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
