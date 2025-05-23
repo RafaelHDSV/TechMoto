@@ -1,0 +1,16 @@
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\bin\Debug\TechMoto.exe.config
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\bin\Debug\TechMoto.exe
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\bin\Debug\TechMoto.pdb
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmLogin.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmMain.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.Properties.Resources.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmInteresseCliente.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmConfiguracaoUsuario.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmListagemMotos.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmCadastroMotos.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.frmListagemMotosTabela.resources
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.csproj.GenerateResource.cache
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.exe
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.pdb
