@@ -48,54 +48,54 @@
   <ItemGroup>
     <Compile Include="Classes.cs" />
     <Compile Include="Constantes.cs" />
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="frms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="frms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="frms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmInteresseCliente.cs">
+    <Compile Include="frms\frmInteresseCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInteresseCliente.Designer.cs">
+    <Compile Include="frms\frmInteresseCliente.Designer.cs">
       <DependentUpon>frmInteresseCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracaoUsuario.cs">
+    <Compile Include="frms\frmConfiguracaoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracaoUsuario.Designer.cs">
+    <Compile Include="frms\frmConfiguracaoUsuario.Designer.cs">
       <DependentUpon>frmConfiguracaoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListagemMotos.cs">
+    <Compile Include="frms\frmListagemMotos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListagemMotos.Designer.cs">
+    <Compile Include="frms\frmListagemMotos.Designer.cs">
       <DependentUpon>frmListagemMotos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroMotos.cs">
+    <Compile Include="frms\frmCadastroMotos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroMotos.Designer.cs">
+    <Compile Include="frms\frmCadastroMotos.Designer.cs">
       <DependentUpon>frmCadastroMotos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListagemMotosTabela.cs">
+    <Compile Include="frms\frmListagemMotosTabela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListagemMotosTabela.Designer.cs">
+    <Compile Include="frms\frmListagemMotosTabela.Designer.cs">
       <DependentUpon>frmListagemMotosTabela.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="frms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="frms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,19 +107,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmInteresseCliente.resx">
+    <EmbeddedResource Include="frms\frmInteresseCliente.resx">
       <DependentUpon>frmInteresseCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracaoUsuario.resx">
+    <EmbeddedResource Include="frms\frmConfiguracaoUsuario.resx">
       <DependentUpon>frmConfiguracaoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListagemMotos.resx">
+    <EmbeddedResource Include="frms\frmListagemMotos.resx">
       <DependentUpon>frmListagemMotos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroMotos.resx">
+    <EmbeddedResource Include="frms\frmCadastroMotos.resx">
       <DependentUpon>frmCadastroMotos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListagemMotosTabela.resx">
+    <EmbeddedResource Include="frms\frmListagemMotosTabela.resx">
       <DependentUpon>frmListagemMotosTabela.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
