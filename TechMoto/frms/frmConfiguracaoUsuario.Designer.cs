@@ -173,13 +173,16 @@
             // 
             this.idInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.idInput.Cursor = System.Windows.Forms.Cursors.No;
+            this.idInput.Enabled = false;
             this.idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idInput.HideSelection = false;
             this.idInput.Location = new System.Drawing.Point(259, 51);
             this.idInput.Margin = new System.Windows.Forms.Padding(4);
             this.idInput.Name = "idInput";
             this.idInput.ReadOnly = true;
             this.idInput.Size = new System.Drawing.Size(200, 22);
             this.idInput.TabIndex = 1;
+            this.idInput.TabStop = false;
             // 
             // label8
             // 
@@ -196,13 +199,16 @@
             // 
             this.nivelInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.nivelInput.Cursor = System.Windows.Forms.Cursors.No;
+            this.nivelInput.Enabled = false;
             this.nivelInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nivelInput.HideSelection = false;
             this.nivelInput.Location = new System.Drawing.Point(259, 363);
             this.nivelInput.Margin = new System.Windows.Forms.Padding(4);
             this.nivelInput.Name = "nivelInput";
             this.nivelInput.ReadOnly = true;
             this.nivelInput.Size = new System.Drawing.Size(200, 22);
             this.nivelInput.TabIndex = 9;
+            this.nivelInput.TabStop = false;
             // 
             // label7
             // 

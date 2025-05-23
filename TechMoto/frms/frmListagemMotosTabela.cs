@@ -16,5 +16,10 @@ namespace TechMoto
         {
             InitializeComponent();
         }
+
+        private void frmListagemMotosTabela_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Classes.GerenciamentoDeMotos.listaMotos;
+        }
     }
 }
