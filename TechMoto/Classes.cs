@@ -28,8 +28,37 @@ namespace TechMoto
             public string Rua { get; set; }
             public UsuarioNivel Nivel { get; set; }
 
-            public Usuario() {
+            public Usuario()
+            {
                 _id = Guid.NewGuid();
+            }
+
+            public Usuario Clone()
+            {
+                var clone = (Usuario)this.MemberwiseClone();
+                clone._id = this._id;
+                return clone;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var outro = obj as Usuario;
+                if (outro == null) return false;
+
+                return _id == outro._id &&
+                       CPF == outro.CPF &&
+                       Nome == outro.Nome &&
+                       Email == outro.Email &&
+                       Senha == outro.Senha &&
+                       Cidade == outro.Cidade &&
+                       Bairro == outro.Bairro &&
+                       Rua == outro.Rua &&
+                       Nivel == outro.Nivel;
+            }
+
+            public override int GetHashCode()
+            {
+                return _id.GetHashCode();
             }
 
             public string ExibirInformacoes()
@@ -58,7 +87,8 @@ namespace TechMoto
             public double TempoUso { get; set; }
             public double KmsRodados { get; set; }
 
-            public Moto() {
+            public Moto()
+            {
                 _id = Guid.NewGuid();
             }
 
@@ -83,21 +113,39 @@ namespace TechMoto
                 var index = listaUsuarios.FindIndex(u => u._id == id);
                 if (index != -1)
                 {
-                    var usuarioAntigo = listaUsuarios[index];
+                    var usuario = listaUsuarios[index];
+                    var original = usuario.Clone();
 
-                    usuarioAntigo._id = string.IsNullOrWhiteSpace(novoUsuario._id.ToString()) ? usuarioAntigo._id : novoUsuario._id;
-                    usuarioAntigo.CPF = string.IsNullOrWhiteSpace(novoUsuario.CPF) ? usuarioAntigo.CPF : novoUsuario.CPF;
-                    usuarioAntigo.Nome = string.IsNullOrWhiteSpace(novoUsuario.Nome) ? usuarioAntigo.Nome : novoUsuario.Nome;
-                    usuarioAntigo.Email = string.IsNullOrWhiteSpace(novoUsuario.Email) ? usuarioAntigo.Email : novoUsuario.Email;
-                    usuarioAntigo.Senha = string.IsNullOrWhiteSpace(novoUsuario.Senha) ? usuarioAntigo.Senha : novoUsuario.Senha;
-                    usuarioAntigo.Cidade = string.IsNullOrWhiteSpace(novoUsuario.Cidade) ? usuarioAntigo.Cidade : novoUsuario.Cidade;
-                    usuarioAntigo.Bairro = string.IsNullOrWhiteSpace(novoUsuario.Bairro) ? usuarioAntigo.Bairro : novoUsuario.Bairro;
-                    usuarioAntigo.Rua = string.IsNullOrWhiteSpace(novoUsuario.Rua) ? usuarioAntigo.Rua : novoUsuario.Rua;
-                    usuarioAntigo.Nivel = string.IsNullOrWhiteSpace(novoUsuario.Nivel.ToString()) ? usuarioAntigo.Nivel : novoUsuario.Nivel;
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.CPF) && usuario.CPF != novoUsuario.CPF)
+                        usuario.CPF = novoUsuario.CPF;
 
-                    listaUsuarios[index] = usuarioAntigo;
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Nome) && usuario.Nome != novoUsuario.Nome)
+                        usuario.Nome = novoUsuario.Nome;
 
-                    MessageBox.Show("Usuário editado com sucesso!");
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Email) && usuario.Email != novoUsuario.Email)
+                        usuario.Email = novoUsuario.Email;
+
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Senha) && usuario.Senha != novoUsuario.Senha)
+                        usuario.Senha = novoUsuario.Senha;
+
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Cidade) && usuario.Cidade != novoUsuario.Cidade)
+                        usuario.Cidade = novoUsuario.Cidade;
+
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Bairro) && usuario.Bairro != novoUsuario.Bairro)
+                        usuario.Bairro = novoUsuario.Bairro;
+
+                    if (!string.IsNullOrWhiteSpace(novoUsuario.Rua) && usuario.Rua != novoUsuario.Rua)
+                        usuario.Rua = novoUsuario.Rua;
+
+                    if (!usuario.Equals(original))
+                    {
+                        listaUsuarios[index] = usuario;
+                        MessageBox.Show("Usuário editado com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum dado foi alterado!");
+                    }
                 }
             }
 

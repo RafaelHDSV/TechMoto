@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxConfiguracaoUsuario = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.idInput = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.nivelInput = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cpfInput = new System.Windows.Forms.MaskedTextBox();
@@ -47,9 +50,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.emailInput = new System.Windows.Forms.TextBox();
             this.nameInput = new System.Windows.Forms.TextBox();
-            this.idInput = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.groupBoxConfiguracaoUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,8 +158,44 @@
             this.groupBoxConfiguracaoUsuario.TabStop = false;
             this.groupBoxConfiguracaoUsuario.Text = "Configuração de Usuário";
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(348, 419);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(111, 34);
+            this.btnAtualizar.TabIndex = 19;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // idInput
+            // 
+            this.idInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.idInput.Cursor = System.Windows.Forms.Cursors.No;
+            this.idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idInput.Location = new System.Drawing.Point(259, 51);
+            this.idInput.Margin = new System.Windows.Forms.Padding(4);
+            this.idInput.Name = "idInput";
+            this.idInput.ReadOnly = true;
+            this.idInput.Size = new System.Drawing.Size(200, 22);
+            this.idInput.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 59);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "ID:";
+            // 
             // nivelInput
             // 
+            this.nivelInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.nivelInput.Cursor = System.Windows.Forms.Cursors.No;
             this.nivelInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nivelInput.Location = new System.Drawing.Point(259, 363);
             this.nivelInput.Margin = new System.Windows.Forms.Padding(4);
@@ -184,7 +220,7 @@
             this.cpfInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpfInput.Location = new System.Drawing.Point(259, 129);
             this.cpfInput.Margin = new System.Windows.Forms.Padding(4);
-            this.cpfInput.Mask = "000.000.000-00";
+            this.cpfInput.Mask = "000,000,000-00";
             this.cpfInput.Name = "cpfInput";
             this.cpfInput.Size = new System.Drawing.Size(200, 22);
             this.cpfInput.TabIndex = 3;
@@ -253,38 +289,6 @@
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(200, 22);
             this.nameInput.TabIndex = 2;
-            // 
-            // idInput
-            // 
-            this.idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idInput.Location = new System.Drawing.Point(259, 51);
-            this.idInput.Margin = new System.Windows.Forms.Padding(4);
-            this.idInput.Name = "idInput";
-            this.idInput.ReadOnly = true;
-            this.idInput.Size = new System.Drawing.Size(200, 22);
-            this.idInput.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 59);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 16);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "ID:";
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(348, 419);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(111, 34);
-            this.btnAtualizar.TabIndex = 19;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frmConfiguracaoUsuario
             // 
