@@ -1,0 +1,16 @@
+D:\TechMoto\telas\bin\Debug\telas.exe.config
+D:\TechMoto\telas\bin\Debug\telas.exe
+D:\TechMoto\telas\bin\Debug\telas.pdb
+D:\TechMoto\telas\obj\Debug\TechMoto.csproj.AssemblyReference.cache
+D:\TechMoto\telas\obj\Debug\telas.frmLogin.resources
+D:\TechMoto\telas\obj\Debug\telas.Properties.Resources.resources
+D:\TechMoto\telas\obj\Debug\telas.frmInteresseCliente.resources
+D:\TechMoto\telas\obj\Debug\telas.frmConfiguracaoUsuario.resources
+D:\TechMoto\telas\obj\Debug\telas.frmListagemMotos.resources
+D:\TechMoto\telas\obj\Debug\telas.frmCadastroMotos.resources
+D:\TechMoto\telas\obj\Debug\telas.frmListagemMotosTabela.resources
+D:\TechMoto\telas\obj\Debug\TechMoto.csproj.GenerateResource.cache
+D:\TechMoto\telas\obj\Debug\TechMoto.csproj.CoreCompileInputs.cache
+D:\TechMoto\telas\obj\Debug\telas.exe
+D:\TechMoto\telas\obj\Debug\telas.pdb
+D:\TechMoto\telas\obj\Debug\telas.frmMain.resources

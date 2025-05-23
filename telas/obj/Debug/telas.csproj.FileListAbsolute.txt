@@ -1,0 +1,13 @@
+C:\Users\201240203\Documents\telas\telas\bin\Debug\telas.exe.config
+C:\Users\201240203\Documents\telas\telas\bin\Debug\telas.exe
+C:\Users\201240203\Documents\telas\telas\bin\Debug\telas.pdb
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.csproj.AssemblyReference.cache
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.Form1.resources
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.Properties.Resources.resources
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.csproj.GenerateResource.cache
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.csproj.CoreCompileInputs.cache
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.exe
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.pdb
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.telas2.resources
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.telas3.resources
+C:\Users\201240203\Documents\telas\telas\obj\Debug\telas.tela4.resources
