@@ -37,10 +37,10 @@ namespace TechMoto
             labelModelo.Text = moto.Modelo;
             labelMarca.Text = moto.Marca;
             labelAno.Text = moto.Ano.ToString();
-            labelKm.Text = moto.KmsRodados.ToString();
+            labelKm.Text = moto.KmsRodados.ToString("N0", new System.Globalization.CultureInfo("pt-BR")) + " kms";
             labelCores.Text = moto.Cor;
-            labelCilindradas.Text = moto.Cilindradas.ToString();
-            labelPreco.Text = "R$ " + moto.Preco.ToString("F2");
+            labelCilindradas.Text = moto.Cilindradas.ToString() + "cc";
+            labelPreco.Text = moto.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"));
             //labelClientesInteressados.Text = moto.ClientesInteressados.Count + " - Clientes Interessados";
         }
     }
