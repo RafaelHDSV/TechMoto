@@ -113,12 +113,13 @@
             // 
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMarca.Location = new System.Drawing.Point(214, 279);
+            this.labelMarca.Location = new System.Drawing.Point(213, 279);
             this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(66, 17);
             this.labelMarca.TabIndex = 8;
             this.labelMarca.Text = "Yamaha";
+            this.labelMarca.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelCores
             // 
