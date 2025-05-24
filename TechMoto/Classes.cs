@@ -181,9 +181,10 @@ namespace TechMoto
                 }
             }
 
-            public static void InformarInteresse(Guid idMoto, Usuario usuario)
+            public static void InformarInteresse(string idMoto, Usuario usuario)
             {
-                var moto = BuscarMoto(idMoto);
+                Guid GuidIdMoto = Guid.Parse(idMoto);
+                var moto = BuscarMoto(GuidIdMoto);
                 if (moto != null && !moto.ClientesInteressados.Any(u => u._id == usuario._id))
                 {
                     moto.ClientesInteressados.Add(usuario);

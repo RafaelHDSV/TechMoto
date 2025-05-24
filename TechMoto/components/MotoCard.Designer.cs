@@ -45,12 +45,12 @@
             // 
             this.labelClientesInteressados.AutoSize = true;
             this.labelClientesInteressados.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClientesInteressados.Location = new System.Drawing.Point(178, 415);
+            this.labelClientesInteressados.Location = new System.Drawing.Point(253, 415);
             this.labelClientesInteressados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelClientesInteressados.Name = "labelClientesInteressados";
-            this.labelClientesInteressados.Size = new System.Drawing.Size(102, 16);
+            this.labelClientesInteressados.Size = new System.Drawing.Size(15, 16);
             this.labelClientesInteressados.TabIndex = 7;
-            this.labelClientesInteressados.Text = "254 - Clientes";
+            this.labelClientesInteressados.Text = "0";
             // 
             // labelKm
             // 
@@ -98,7 +98,7 @@
             // 
             // image
             // 
-            this.image.BackColor = System.Drawing.SystemColors.Control;
+            this.image.BackColor = System.Drawing.Color.White;
             this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
             this.image.Location = new System.Drawing.Point(20, 20);

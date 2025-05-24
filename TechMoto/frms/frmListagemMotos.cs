@@ -34,20 +34,11 @@ namespace TechMoto
 
             List<Classes.Moto> listaMotos = Classes.GerenciamentoDeMotos.ListarTodasMotos();
 
-            // Largura do painel
             int larguraPainel = flowLayoutPanelMotos.ClientSize.Width;
-
-            // Largura fixa do card (pode ser ajustado)
-            int larguraCard = 250;
-
-            // Quantos cards cabem por linha
+            int larguraCard = 230;
             int cardsPorLinha = Math.Max(1, larguraPainel / larguraCard);
-
-            // Espaço restante que será distribuído como margem
             int espacoRestante = larguraPainel - (cardsPorLinha * larguraCard);
-
-            // Espaço entre os cards (como margin horizontal)
-            int margemHorizontal = espacoRestante / (cardsPorLinha + 1); // +1 para espaço à esquerda e direita
+            int margemHorizontal = espacoRestante / (cardsPorLinha + 1); 
 
             foreach (var moto in listaMotos)
             {

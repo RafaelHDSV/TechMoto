@@ -12,11 +12,19 @@ namespace TechMoto
 {
     public partial class frmInteresseCliente : Form
     {
+        private Classes.Usuario usuarioLogado;
+
         public frmInteresseCliente(Classes.Usuario usuarioLogado)
         {
             InitializeComponent();
 
+            this.usuarioLogado = usuarioLogado;
+
             inputNome.Text = usuarioLogado.Nome;
+
+            inputMotos.DataSource = Classes.GerenciamentoDeMotos.listaMotos;
+            inputMotos.DisplayMember = "Modelo";
+            inputMotos.ValueMember = "_id";
 
             inputOferta.TextChanged += inputOferta_TextChanged;
             inputOferta.Text = "R$ 0,00";
@@ -45,10 +53,12 @@ namespace TechMoto
         private void btnInteresse_Click(object sender, EventArgs e)
         {
             string nome = inputNome.Text;
-            //string moto = inputMoto.Text;
+            string moto = inputMotos.SelectedValue.ToString();
             string telefone = inputTelefone.Text;
             string oferta = inputOferta.Text.Replace("R$", "").Replace(".", "").Replace(",", "").Trim();
             string observacoes = inputObservacoes.Text;
+
+            Classes.GerenciamentoDeMotos.InformarInteresse(moto, usuarioLogado);
         }
     }
 }
