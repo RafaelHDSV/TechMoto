@@ -14,3 +14,4 @@ C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.cspr
 C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.csproj.CoreCompileInputs.cache
 C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.exe
 C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.pdb
+C:\Users\rafae\OneDrive\Documentos\DEV\TechMoto\TechMoto\obj\Debug\TechMoto.MotoCard.resources

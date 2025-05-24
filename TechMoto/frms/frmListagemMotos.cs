@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TechMoto.Classes;
 
 namespace TechMoto
 {
@@ -15,16 +16,19 @@ namespace TechMoto
         public frmListagemMotos()
         {
             InitializeComponent();
+            CarregarMotos();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void CarregarMotos()
         {
+            List<Classes.Moto> listaMotos = Classes.GerenciamentoDeMotos.ListarTodasMotos();
 
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
+            foreach (var moto in listaMotos)
+            {
+                MotoCard card = new MotoCard();
+                card.SetMoto(moto);
+                flowLayoutPanelMotos.Controls.Add(card);
+            }
         }
     }
 }

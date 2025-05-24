@@ -80,12 +80,15 @@ namespace TechMoto
         public class Moto
         {
             public Guid _id { get; set; }
-            public string Nome { get; set; }
-            public string Cor { get; set; }
             public string Modelo { get; set; }
+            public string Marca { get; set; }
             public int Ano { get; set; }
-            public double TempoUso { get; set; }
             public double KmsRodados { get; set; }
+            public string Cor { get; set; }
+            public int Cilindradas { get; set; }
+            public double Preco { get; set; }
+            public string Imagem { get; set; }
+            public List<Usuario> ClientesInteressados { get; set; } = new List<Usuario>();
 
             public Moto()
             {
@@ -94,7 +97,7 @@ namespace TechMoto
 
             public string ExibirInformacoes()
             {
-                return $"Moto encontrada com sucesso:\n _id: {_id} \n Nome: {Nome} \n Cor: {Cor} \n Modelo: {Modelo} \n Ano: {Ano} \n TempoUso: {TempoUso} \n KmsRodados: {KmsRodados}";
+                return $"Moto encontrada com sucesso:\n _id: {_id} \n Modelo: {Modelo} \n Marca: {Marca} \n Ano: {Ano} \n KmsRodados: {KmsRodados} \n Cor: {Cor} \n Cilindradas: {Cilindradas}";
             }
         }
 
