@@ -50,7 +50,7 @@
             // inputModelo
             // 
             this.inputModelo.Location = new System.Drawing.Point(48, 73);
-            this.inputModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputModelo.Margin = new System.Windows.Forms.Padding(4);
             this.inputModelo.Name = "inputModelo";
             this.inputModelo.Size = new System.Drawing.Size(152, 22);
             this.inputModelo.TabIndex = 0;
@@ -67,7 +67,7 @@
             // inputTempoDeUso
             // 
             this.inputTempoDeUso.Location = new System.Drawing.Point(275, 73);
-            this.inputTempoDeUso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputTempoDeUso.Margin = new System.Windows.Forms.Padding(4);
             this.inputTempoDeUso.Name = "inputTempoDeUso";
             this.inputTempoDeUso.Size = new System.Drawing.Size(153, 22);
             this.inputTempoDeUso.TabIndex = 1;
@@ -89,9 +89,9 @@
             this.groupBox1.Controls.Add(this.inputModelo);
             this.groupBox1.Controls.Add(this.inputTempoDeUso);
             this.groupBox1.Location = new System.Drawing.Point(284, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(487, 436);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -160,7 +160,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Location = new System.Drawing.Point(163, 332);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(163, 34);
             this.btnCadastrar.TabIndex = 6;
@@ -170,7 +170,7 @@
             // inputAno
             // 
             this.inputAno.Location = new System.Drawing.Point(279, 233);
-            this.inputAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputAno.Margin = new System.Windows.Forms.Padding(4);
             this.inputAno.Name = "inputAno";
             this.inputAno.Size = new System.Drawing.Size(149, 22);
             this.inputAno.TabIndex = 5;
@@ -178,7 +178,7 @@
             // inputCor
             // 
             this.inputCor.Location = new System.Drawing.Point(48, 233);
-            this.inputCor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputCor.Margin = new System.Windows.Forms.Padding(4);
             this.inputCor.Name = "inputCor";
             this.inputCor.Size = new System.Drawing.Size(152, 22);
             this.inputCor.TabIndex = 4;
@@ -186,7 +186,7 @@
             // inputQuilometragem
             // 
             this.inputQuilometragem.Location = new System.Drawing.Point(275, 153);
-            this.inputQuilometragem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputQuilometragem.Margin = new System.Windows.Forms.Padding(4);
             this.inputQuilometragem.Name = "inputQuilometragem";
             this.inputQuilometragem.Size = new System.Drawing.Size(153, 22);
             this.inputQuilometragem.TabIndex = 3;
@@ -194,7 +194,7 @@
             // inputMarca
             // 
             this.inputMarca.Location = new System.Drawing.Point(48, 153);
-            this.inputMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputMarca.Margin = new System.Windows.Forms.Padding(4);
             this.inputMarca.Name = "inputMarca";
             this.inputMarca.Size = new System.Drawing.Size(152, 22);
             this.inputMarca.TabIndex = 2;
@@ -207,9 +207,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCadastroMotos";
-            this.Text = "Cadastro de Motos";
+            this.Text = "TechMoto - Cadastro de Motos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

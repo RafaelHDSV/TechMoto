@@ -60,7 +60,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListagemMotosTabela";
-            this.Text = "testes5";
+            this.Text = "TechMoto - Listagem de Motos (Tabela)";
             this.Load += new System.EventHandler(this.frmListagemMotosTabela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenciamentoDeMotosBindingSource)).EndInit();

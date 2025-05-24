@@ -305,7 +305,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfiguracaoUsuario";
-            this.Text = "Configuração de Usuário";
+            this.Text = "TechMoto - Configuração de Usuário";
             this.groupBoxConfiguracaoUsuario.ResumeLayout(false);
             this.groupBoxConfiguracaoUsuario.PerformLayout();
             this.ResumeLayout(false);
