@@ -30,48 +30,64 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInteresseCliente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.inputOferta = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnInteresse = new System.Windows.Forms.Button();
+            this.inputObservacoes = new System.Windows.Forms.TextBox();
+            this.InputCidade = new System.Windows.Forms.TextBox();
+            this.inputNome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.inputOferta);
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(249, 48);
+            this.groupBox1.Controls.Add(this.btnInteresse);
+            this.groupBox1.Controls.Add(this.inputObservacoes);
+            this.groupBox1.Controls.Add(this.InputCidade);
+            this.groupBox1.Controls.Add(this.inputNome);
+            this.groupBox1.Location = new System.Drawing.Point(264, 55);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(543, 427);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(16);
+            this.groupBox1.Size = new System.Drawing.Size(527, 427);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario de Interesse";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // inputOferta
+            // 
+            this.inputOferta.Location = new System.Drawing.Point(298, 130);
+            this.inputOferta.Margin = new System.Windows.Forms.Padding(4);
+            this.inputOferta.Name = "inputOferta";
+            this.inputOferta.Size = new System.Drawing.Size(200, 22);
+            this.inputOferta.TabIndex = 3;
+            this.inputOferta.TextChanged += new System.EventHandler(this.inputOferta_TextChanged);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(298, 64);
+            this.maskedTextBox1.Mask = "(00) 00000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 22);
+            this.maskedTextBox1.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 199);
+            this.label5.Location = new System.Drawing.Point(20, 179);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 16);
@@ -81,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(325, 130);
+            this.label4.Location = new System.Drawing.Point(295, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
@@ -91,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(325, 64);
+            this.label3.Location = new System.Drawing.Point(295, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
@@ -101,7 +117,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 130);
+            this.label2.Location = new System.Drawing.Point(20, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
@@ -111,64 +127,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 64);
+            this.label1.Location = new System.Drawing.Point(20, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nome";
             // 
-            // textBox5
+            // btnInteresse
             // 
-            this.textBox5.Location = new System.Drawing.Point(329, 150);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 22);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Tag = "";
+            this.btnInteresse.Location = new System.Drawing.Point(172, 339);
+            this.btnInteresse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInteresse.Name = "btnInteresse";
+            this.btnInteresse.Size = new System.Drawing.Size(196, 49);
+            this.btnInteresse.TabIndex = 5;
+            this.btnInteresse.Text = "Estou interessado";
+            this.btnInteresse.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // inputObservacoes
             // 
-            this.button1.Location = new System.Drawing.Point(152, 354);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 49);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Estou interessado";
-            this.button1.UseVisualStyleBackColor = true;
+            this.inputObservacoes.Location = new System.Drawing.Point(22, 199);
+            this.inputObservacoes.Margin = new System.Windows.Forms.Padding(4);
+            this.inputObservacoes.Multiline = true;
+            this.inputObservacoes.Name = "inputObservacoes";
+            this.inputObservacoes.Size = new System.Drawing.Size(476, 110);
+            this.inputObservacoes.TabIndex = 4;
             // 
-            // textBox4
+            // InputCidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 219);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(352, 110);
-            this.textBox4.TabIndex = 3;
+            this.InputCidade.Location = new System.Drawing.Point(22, 130);
+            this.InputCidade.Margin = new System.Windows.Forms.Padding(4);
+            this.InputCidade.Name = "InputCidade";
+            this.InputCidade.Size = new System.Drawing.Size(200, 22);
+            this.InputCidade.TabIndex = 2;
             // 
-            // textBox3
+            // inputNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 150);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(329, 84);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(109, 84);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 0;
+            this.inputNome.Location = new System.Drawing.Point(22, 64);
+            this.inputNome.Margin = new System.Windows.Forms.Padding(4);
+            this.inputNome.Name = "inputNome";
+            this.inputNome.Size = new System.Drawing.Size(200, 22);
+            this.inputNome.TabIndex = 0;
             // 
             // frmInteresseCliente
             // 
@@ -189,16 +188,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnInteresse;
+        private System.Windows.Forms.TextBox inputObservacoes;
+        private System.Windows.Forms.TextBox InputCidade;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox inputOferta;
     }
 }
