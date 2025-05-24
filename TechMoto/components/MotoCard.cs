@@ -42,8 +42,8 @@ namespace TechMoto
             labelCilindradas.Text = moto.Cilindradas.ToString() + "cc";
             labelPreco.Text = moto.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"));
 
-            //string clientesInteressadosMessage = moto.ClientesInteressados.Count > 0 ? moto.ClientesInteressados.Count > 1 ? moto.ClientesInteressados.Count + " Interessados"  : moto.ClientesInteressados.Count + " Interessado" : "Nenhum Interessado";
-            //labelClientesInteressados.Text = clientesInteressadosMessage;
+            string clientesInteressadosMessage = moto.ClientesInteressados.Count > 0 ? moto.ClientesInteressados.Count > 1 ? moto.ClientesInteressados.Count + " Interessados" : moto.ClientesInteressados.Count + " Interessado" : "Nenhum Interessado";
+            labelClientesInteressados.Text = clientesInteressadosMessage;
         }
     }
 }

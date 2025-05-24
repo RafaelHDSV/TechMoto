@@ -45,12 +45,13 @@
             // 
             this.labelClientesInteressados.AutoSize = true;
             this.labelClientesInteressados.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClientesInteressados.Location = new System.Drawing.Point(253, 415);
+            this.labelClientesInteressados.Location = new System.Drawing.Point(21, 415);
             this.labelClientesInteressados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelClientesInteressados.Name = "labelClientesInteressados";
-            this.labelClientesInteressados.Size = new System.Drawing.Size(15, 16);
+            this.labelClientesInteressados.Size = new System.Drawing.Size(153, 16);
             this.labelClientesInteressados.TabIndex = 7;
-            this.labelClientesInteressados.Text = "0";
+            this.labelClientesInteressados.Text = "Nenhum Interessado";
+            this.labelClientesInteressados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelKm
             // 
@@ -125,7 +126,7 @@
             // 
             this.labelCores.AutoSize = true;
             this.labelCores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCores.Location = new System.Drawing.Point(21, 414);
+            this.labelCores.Location = new System.Drawing.Point(150, 380);
             this.labelCores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCores.Name = "labelCores";
             this.labelCores.Size = new System.Drawing.Size(39, 17);
@@ -136,7 +137,7 @@
             // 
             this.labelCilindradas.AutoSize = true;
             this.labelCilindradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCilindradas.Location = new System.Drawing.Point(144, 380);
+            this.labelCilindradas.Location = new System.Drawing.Point(228, 415);
             this.labelCilindradas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCilindradas.Name = "labelCilindradas";
             this.labelCilindradas.Size = new System.Drawing.Size(51, 17);
