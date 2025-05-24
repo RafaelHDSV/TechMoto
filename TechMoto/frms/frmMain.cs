@@ -51,7 +51,7 @@ namespace TechMoto
 
         private void formulárioDeInteresseDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInteresseCliente frmInteresseCliente = new frmInteresseCliente();
+            frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado);
             frmInteresseCliente.MdiParent = this;
             frmInteresseCliente.Show();
         }

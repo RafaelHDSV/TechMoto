@@ -180,6 +180,20 @@ namespace TechMoto
                     listaMotos[index] = novaMoto;
                 }
             }
+
+            public static void InformarInteresse(Guid idMoto, Usuario usuario)
+            {
+                var moto = BuscarMoto(idMoto);
+                if (moto != null && !moto.ClientesInteressados.Any(u => u._id == usuario._id))
+                {
+                    moto.ClientesInteressados.Add(usuario);
+                    MessageBox.Show($"Interesse registrado para a moto: {moto.Modelo}");
+                }
+                else
+                {
+                    MessageBox.Show("Usuário já está interessado nesta moto ou moto não encontrada.");
+                }
+            }
         }
     }
 }
