@@ -26,16 +26,22 @@ namespace TechMoto
 
         private void AdicionarDadosMockados()
         {
-            var motosMockadas = Constantes.CriarMotosMockadas();
-            foreach (var moto in motosMockadas)
+            if (!GerenciamentoDeMotos.listaMotos.Any())
             {
-                GerenciamentoDeMotos.AdicionarMoto(moto, GerenciamentoDeMotos.TipoAdicionarMoto.Mocked);
+                var motosMockadas = Constantes.CriarMotosMockadas();
+                foreach (var moto in motosMockadas)
+                {
+                    GerenciamentoDeMotos.AdicionarMoto(moto, GerenciamentoDeMotos.TipoAdicionarMoto.Mocked);
+                }
             }
 
-            var usuariosMockados = Constantes.CriarUsuariosMockados();
-            foreach (var usuario in usuariosMockados)
+            if (!GerenciamentoDeMotos.listaUsuarios.Any())
             {
-                GerenciamentoDeMotos.AdicionarUsuario(usuario);
+                var usuariosMockados = Constantes.CriarUsuariosMockados();
+                foreach (var usuario in usuariosMockados)
+                {
+                    GerenciamentoDeMotos.AdicionarUsuario(usuario);
+                }
             }
         }
 
