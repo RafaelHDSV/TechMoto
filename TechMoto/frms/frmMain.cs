@@ -50,6 +50,11 @@ namespace TechMoto
             {
                 frmCadastroMotos frmCadastroMotos = new frmCadastroMotos(null);
                 frmCadastroMotos.MdiParent = this;
+                frmCadastroMotos.FormClosed += (s, args) =>
+                {
+                    var listagemAtual = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
+                    listagemAtual?.CarregarMotos();
+                };
                 frmCadastroMotos.Show();
             }
             else
@@ -70,7 +75,7 @@ namespace TechMoto
                 frmInteresseCliente.FormClosed += (s, args) =>
                 {
                     var listagemAtual = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
-                    listagemAtual?.CarregarMotos(); // Captura no momento do fechamento
+                    listagemAtual?.CarregarMotos();
                 };
                 frmInteresseCliente.Show();
             } else

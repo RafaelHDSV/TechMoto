@@ -87,6 +87,9 @@ namespace TechMoto
                     Classes.GerenciamentoDeMotos.AdicionarMoto(moto, Classes.GerenciamentoDeMotos.TipoAdicionarMoto.Formulario);
                 }
 
+                var formListagemAberta = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
+                formListagemAberta?.CarregarMotos();
+
                 inputModelo.Clear();
                 inputMarca.Clear();
                 inputAno.Clear();

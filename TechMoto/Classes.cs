@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TechMoto.Classes;
 
 namespace TechMoto
 {
@@ -79,7 +81,7 @@ namespace TechMoto
 
         public class Moto
         {
-            public Guid _id { get; set; }
+            public string _id { get; set; }
             public string Modelo { get; set; }
             public string Marca { get; set; }
             public int Ano { get; set; }
@@ -90,11 +92,6 @@ namespace TechMoto
             public string Imagem { get; set; }
             public List<Usuario> ClientesInteressados { get; set; } = new List<Usuario>();
 
-            public Moto()
-            {
-                _id = Guid.NewGuid();
-            }
-            
             public string ExibirInformacoes()
             {
                 return $"Moto encontrada com sucesso:\n _id: {_id} \n Modelo: {Modelo} \n Marca: {Marca} \n Ano: {Ano} \n KmsRodados: {KmsRodados} \n Cor: {Cor} \n Cilindradas: {Cilindradas}";
@@ -160,29 +157,23 @@ namespace TechMoto
 
             public static void AdicionarMoto(Moto moto, TipoAdicionarMoto tipo)
             {
-                bool existeDuplicada = listaMotos.Any(m =>
-                    m.Modelo == moto.Modelo &&
-                    m.Marca == moto.Marca &&
-                    m.Ano == moto.Ano &&
-                    m.KmsRodados == moto.KmsRodados &&
-                    m.Cor == moto.Cor &&
-                    m.Cilindradas == moto.Cilindradas &&
-                    m.Preco == moto.Preco &&
-                    m.Imagem == moto.Imagem);
+                moto._id = $"{moto.Modelo.ToLower().Replace(" ", "-")}";
 
-                if (!existeDuplicada)
+                if (listaMotos.Any(m => m._id == moto._id))
                 {
-                    listaMotos.Add(moto);
-                    if (tipo == TipoAdicionarMoto.Formulario) MessageBox.Show("Moto cadastrada com sucesso!");
+                    return;
                 }
+
+                listaMotos.Add(moto);
+                if (tipo == TipoAdicionarMoto.Formulario) MessageBox.Show("Moto cadastrada com sucesso!");
             }
 
-            public static void RemoverMoto(Guid id)
+            public static void RemoverMoto(string id)
             {
                 listaMotos.RemoveAll(m => m._id == id);
             }
 
-            public static Moto BuscarMoto(Guid id)
+            public static Moto BuscarMoto(string id)
             {
                 return listaMotos.FirstOrDefault(m => m._id == id);
             }
@@ -192,19 +183,25 @@ namespace TechMoto
                 return listaMotos;
             }
 
-            public static void EditarMoto(Guid id, Moto novaMoto)
+            public static void EditarMoto(string id, Moto novaMoto)
             {
-                var index = listaMotos.FindIndex(m => m._id == id);
-                if (index != -1)
+                var motoExistente = listaMotos.FirstOrDefault(m => m._id == id);
+                if (motoExistente != null)
                 {
-                    listaMotos[index] = novaMoto;
+                    motoExistente.Modelo = novaMoto.Modelo;
+                    motoExistente.Marca = novaMoto.Marca;
+                    motoExistente.Ano = novaMoto.Ano;
+                    motoExistente.KmsRodados = novaMoto.KmsRodados;
+                    motoExistente.Cor = novaMoto.Cor;
+                    motoExistente.Cilindradas = novaMoto.Cilindradas;
+                    motoExistente.Preco = novaMoto.Preco;
+                    motoExistente.Imagem = novaMoto.Imagem;
                 }
             }
 
             public static void InformarInteresse(string idMoto, Usuario usuario)
             {
-                Guid GuidIdMoto = Guid.Parse(idMoto);
-                var moto = BuscarMoto(GuidIdMoto);
+                var moto = BuscarMoto(idMoto);
                 if (moto != null && !moto.ClientesInteressados.Any(u => u._id == usuario._id))
                 {
                     moto.ClientesInteressados.Add(usuario);
