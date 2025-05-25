@@ -94,7 +94,7 @@ namespace TechMoto
             {
                 _id = Guid.NewGuid();
             }
-
+            
             public string ExibirInformacoes()
             {
                 return $"Moto encontrada com sucesso:\n _id: {_id} \n Modelo: {Modelo} \n Marca: {Marca} \n Ano: {Ano} \n KmsRodados: {KmsRodados} \n Cor: {Cor} \n Cilindradas: {Cilindradas}";
@@ -154,7 +154,20 @@ namespace TechMoto
 
             public static void AdicionarMoto(Moto moto)
             {
-                listaMotos.Add(moto);
+                bool existeDuplicada = listaMotos.Any(m =>
+                    m.Modelo == moto.Modelo &&
+                    m.Marca == moto.Marca &&
+                    m.Ano == moto.Ano &&
+                    m.KmsRodados == moto.KmsRodados &&
+                    m.Cor == moto.Cor &&
+                    m.Cilindradas == moto.Cilindradas &&
+                    m.Preco == moto.Preco &&
+                    m.Imagem == moto.Imagem);
+
+                if (!existeDuplicada)
+                {
+                    listaMotos.Add(moto);
+                }
             }
 
             public static void RemoverMoto(Guid id)

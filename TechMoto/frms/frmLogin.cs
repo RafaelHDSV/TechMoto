@@ -27,16 +27,12 @@ namespace TechMoto
         private void AdicionarDadosMockados()
         {
             var motosMockadas = Constantes.CriarMotosMockadas();
-            GerenciamentoDeMotos.listaMotos.Clear();
-
             foreach (var moto in motosMockadas)
             {
                 GerenciamentoDeMotos.AdicionarMoto(moto);
             }
 
             var usuariosMockados = Constantes.CriarUsuariosMockados();
-            GerenciamentoDeMotos.listaUsuarios.Clear();
-
             foreach (var usuario in usuariosMockados)
             {
                 GerenciamentoDeMotos.AdicionarUsuario(usuario);

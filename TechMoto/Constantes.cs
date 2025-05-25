@@ -82,7 +82,6 @@ namespace TechMoto
             return motos;
         }
 
-
         public static List<Classes.Usuario> CriarUsuariosMockados()
         {
             List<Classes.Usuario> usuarios = new List<Classes.Usuario>

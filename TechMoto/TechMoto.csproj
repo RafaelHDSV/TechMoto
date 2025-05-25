@@ -149,11 +149,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="assets\heart-fill.png" />
-    <Content Include="assets\heart.png" />
-    <Content Include="assets\logo.ico" />
-    <Content Include="assets\logo.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -158,6 +158,7 @@
             this.heartIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heartIcon.TabIndex = 11;
             this.heartIcon.TabStop = false;
+            this.heartIcon.Click += new System.EventHandler(this.heartIcon_Click);
             // 
             // MotoCard
             // 

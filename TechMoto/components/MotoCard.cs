@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using System.IO;
 
 namespace TechMoto
 {
     public partial class MotoCard : UserControl
     {
+        //private usuarioLogado = 
+
         public MotoCard()
         {
             InitializeComponent();
@@ -63,18 +66,15 @@ namespace TechMoto
 
                     try
                     {
-                        using (var client = new WebClient())
-                        {
-                            string heartIconImage = moto.ClientesInteressados.Contains(usuarioLogado) ? "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\assets\\heart-fill.png" : "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\assets\\heart.png";
-                            var stream = client.OpenRead(heartIconImage);
-                            heartIcon.Image = Image.FromStream(stream);
-                        }
+                        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                        string heartIconImage = Path.Combine(basePath, "assets",
+                            moto.ClientesInteressados.Contains(usuarioLogado) ? "heart-fill.png" : "heart.png");
+                        heartIcon.Image = Image.FromFile(heartIconImage); 
                     }
                     catch
                     {
-                        heartIcon.Image = Image.FromStream(new WebClient().OpenRead("https://imgs.search.brave.com/VOnq_c1-tNc42ruMDUJXyx5fWx8CB4VvZ7iolJTiWJc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vZzU3MndN/aWU2R21WU3FvVWhV/bG1TLVlsT2daZm85/N1EyN2ZjNTJpcVYz/MC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkw/TXk1bS9kR05rYmk1/dVpYUXZhbkJuL0x6/RXhMemN3THpReEx6/QTIvTHpNMk1GOUdY/ekV4TnpBMC9NVEEy/TWpSZlpWTlVZMm8z/L2RrbzNPRVJET1hO/YVowWm4vUWxKS1Yx/TTNWek40Y21Fdy9R/WGd1YW5Cbg"));
+                        heartIcon.Image = Image.FromStream(new WebClient().OpenRead("https://imgs.search.brave.com/VOnq_c1..."));
                     }
-
 
                     break;
                 case Classes.UsuarioNivel.Loja:
@@ -86,6 +86,22 @@ namespace TechMoto
                     labelClientesInteressados.Visible = false;
                     break;
             }
+        }
+
+        private void heartIcon_Click(object sender, EventArgs e)
+        {
+            //var formAberto = Application.OpenForms.OfType<frmInteresseCliente>().FirstOrDefault();
+
+            //if (formAberto == null)
+            //{
+            //    frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado);
+            //    frmInteresseCliente.MdiParent = this;
+            //    frmInteresseCliente.Show();
+            //}
+            //else
+            //{
+            //    formAberto.BringToFront();
+            //}
         }
     }
 }
