@@ -152,7 +152,13 @@ namespace TechMoto
                 }
             }
 
-            public static void AdicionarMoto(Moto moto)
+            public enum TipoAdicionarMoto
+            {
+                Mocked,
+                Formulario
+            }
+
+            public static void AdicionarMoto(Moto moto, TipoAdicionarMoto tipo)
             {
                 bool existeDuplicada = listaMotos.Any(m =>
                     m.Modelo == moto.Modelo &&
@@ -167,6 +173,7 @@ namespace TechMoto
                 if (!existeDuplicada)
                 {
                     listaMotos.Add(moto);
+                    if (tipo == TipoAdicionarMoto.Formulario) MessageBox.Show("Moto cadastrada com sucesso!");
                 }
             }
 

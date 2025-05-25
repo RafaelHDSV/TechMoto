@@ -44,10 +44,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.inputAno = new System.Windows.Forms.TextBox();
             this.inputCor = new System.Windows.Forms.TextBox();
             this.inputQuilometragem = new System.Windows.Forms.TextBox();
             this.inputMarca = new System.Windows.Forms.TextBox();
+            this.inputAno = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.inputAno);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.inputImage);
             this.groupBox1.Controls.Add(this.label8);
@@ -83,7 +84,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnCadastrar);
-            this.groupBox1.Controls.Add(this.inputAno);
             this.groupBox1.Controls.Add(this.inputCor);
             this.groupBox1.Controls.Add(this.inputQuilometragem);
             this.groupBox1.Controls.Add(this.inputMarca);
@@ -113,7 +113,7 @@
             this.inputImage.Margin = new System.Windows.Forms.Padding(4);
             this.inputImage.Name = "inputImage";
             this.inputImage.Size = new System.Drawing.Size(200, 22);
-            this.inputImage.TabIndex = 25;
+            this.inputImage.TabIndex = 7;
             // 
             // label8
             // 
@@ -131,7 +131,8 @@
             this.inputPreco.Margin = new System.Windows.Forms.Padding(4);
             this.inputPreco.Name = "inputPreco";
             this.inputPreco.Size = new System.Drawing.Size(200, 22);
-            this.inputPreco.TabIndex = 23;
+            this.inputPreco.TabIndex = 6;
+            this.inputPreco.TextChanged += new System.EventHandler(this.inputPreco_TextChanged);
             // 
             // label6
             // 
@@ -149,7 +150,8 @@
             this.inputCilindradas.Margin = new System.Windows.Forms.Padding(4);
             this.inputCilindradas.Name = "inputCilindradas";
             this.inputCilindradas.Size = new System.Drawing.Size(200, 22);
-            this.inputCilindradas.TabIndex = 21;
+            this.inputCilindradas.TabIndex = 5;
+            this.inputCilindradas.TextChanged += new System.EventHandler(this.inputCilindradas_TextChanged);
             // 
             // label7
             // 
@@ -207,18 +209,10 @@
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(163, 34);
-            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // inputAno
-            // 
-            this.inputAno.Location = new System.Drawing.Point(20, 139);
-            this.inputAno.Margin = new System.Windows.Forms.Padding(4);
-            this.inputAno.Name = "inputAno";
-            this.inputAno.Size = new System.Drawing.Size(200, 22);
-            this.inputAno.TabIndex = 5;
             // 
             // inputCor
             // 
@@ -235,6 +229,7 @@
             this.inputQuilometragem.Name = "inputQuilometragem";
             this.inputQuilometragem.Size = new System.Drawing.Size(200, 22);
             this.inputQuilometragem.TabIndex = 3;
+            this.inputQuilometragem.TextChanged += new System.EventHandler(this.inputQuilometragem_TextChanged);
             // 
             // inputMarca
             // 
@@ -242,7 +237,15 @@
             this.inputMarca.Margin = new System.Windows.Forms.Padding(4);
             this.inputMarca.Name = "inputMarca";
             this.inputMarca.Size = new System.Drawing.Size(200, 22);
-            this.inputMarca.TabIndex = 2;
+            this.inputMarca.TabIndex = 1;
+            // 
+            // inputAno
+            // 
+            this.inputAno.Location = new System.Drawing.Point(20, 139);
+            this.inputAno.Mask = "0000";
+            this.inputAno.Name = "inputAno";
+            this.inputAno.Size = new System.Drawing.Size(200, 22);
+            this.inputAno.TabIndex = 2;
             // 
             // frmCadastroMotos
             // 
@@ -273,7 +276,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox inputAno;
         private System.Windows.Forms.TextBox inputCor;
         private System.Windows.Forms.TextBox inputQuilometragem;
         private System.Windows.Forms.TextBox inputMarca;
@@ -283,5 +285,6 @@
         private System.Windows.Forms.TextBox inputPreco;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox inputCilindradas;
+        private System.Windows.Forms.MaskedTextBox inputAno;
     }
 }
