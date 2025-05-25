@@ -13,14 +13,34 @@ namespace TechMoto
 {
     public partial class frmCadastroMotos : Form
     {
-        public frmCadastroMotos()
+        private Classes.Moto editedMoto;
+        public frmCadastroMotos(Classes.Moto moto)
         {
             InitializeComponent();
+
+            this.editedMoto = moto;
 
             inputQuilometragem.TextChanged += inputQuilometragem_TextChanged;
             inputCilindradas.TextChanged += inputCilindradas_TextChanged;
             inputPreco.TextChanged += inputPreco_TextChanged;
             inputPreco.Text = "R$ 0,00";
+
+            if (moto != null)
+            {
+                string componentTitle = "Editando a moto: " + moto.Modelo;
+                this.Text = componentTitle;
+                groupBox.Text = componentTitle;
+                btnCadastrar.Text = "Salvar Alterações";
+
+                inputModelo.Text = moto.Modelo;
+                inputMarca.Text = moto.Marca;
+                inputAno.Text = moto.Ano.ToString();
+                inputQuilometragem.Text = moto.KmsRodados.ToString("N0", new System.Globalization.CultureInfo("pt-BR")) + " km";
+                inputCor.Text = moto.Cor;
+                inputCilindradas.Text = moto.Cilindradas.ToString() + "cc";
+                inputPreco.Text = moto.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"));
+                inputImage.Text = moto.Imagem;
+            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -59,7 +79,13 @@ namespace TechMoto
                     Imagem = imagem
                 };
 
-                Classes.GerenciamentoDeMotos.AdicionarMoto(moto, Classes.GerenciamentoDeMotos.TipoAdicionarMoto.Formulario);
+                if (editedMoto != null)
+                {
+                    Classes.GerenciamentoDeMotos.EditarMoto(editedMoto._id, moto);
+                } else
+                {
+                    Classes.GerenciamentoDeMotos.AdicionarMoto(moto, Classes.GerenciamentoDeMotos.TipoAdicionarMoto.Formulario);
+                }
 
                 inputModelo.Clear();
                 inputMarca.Clear();

@@ -52,10 +52,12 @@ namespace TechMoto
             labelClientesInteressados.Text = clientesInteressadosMessage;
         }
 
-        public void RenderizarFavoritos(Classes.Usuario usuarioLogado, Classes.Moto moto)
+        public void RenderizarPorCliente(Classes.Usuario usuarioLogado, Classes.Moto moto)
         {
             if (usuarioLogado == null)
             {
+                editIcon.Visible = false;
+                trashIcon.Visible = false;
                 heartIcon.Visible = false;
                 labelClientesInteressados.Visible = false;
                 return;
@@ -67,6 +69,8 @@ namespace TechMoto
             {
 
                 case Classes.UsuarioNivel.Cliente:
+                    editIcon.Visible = false;
+                    trashIcon.Visible = false;
                     heartIcon.Visible = true;
                     labelClientesInteressados.Visible = false;
 
@@ -84,10 +88,14 @@ namespace TechMoto
 
                     break;
                 case Classes.UsuarioNivel.Loja:
+                    editIcon.Visible = true;
+                    trashIcon.Visible = true;
                     heartIcon.Visible = false;
                     labelClientesInteressados.Visible = true;
                     break;
                 default:
+                    editIcon.Visible = false;
+                    trashIcon.Visible = false;
                     heartIcon.Visible = false;
                     labelClientesInteressados.Visible = false;
                     break;
@@ -113,5 +121,40 @@ namespace TechMoto
             }
         }
 
+        private void editIcon_Click(object sender, EventArgs e)
+        {
+            var formAberto = Application.OpenForms.OfType<frmCadastroMotos>().FirstOrDefault();
+
+            if (formAberto == null)
+            {
+                frmCadastroMotos frmCadastroMotos = new frmCadastroMotos(moto);
+                Form parentForm = this.FindForm();
+                frmCadastroMotos.StartPosition = FormStartPosition.CenterParent;
+                frmCadastroMotos.Show(parentForm);
+            }
+            else
+            {
+                formAberto.BringToFront();
+                formAberto.Activate();
+            }
+        }
+
+        private void trashIcon_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Tem certeza que deseja excluir esta moto?",
+                "Confirmação de Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Classes.GerenciamentoDeMotos.RemoverMoto(moto._id);
+                this.Parent.Controls.Remove(this);
+
+                MessageBox.Show("Moto excluída com sucesso!");
+            }
+        }
     }
 }

@@ -39,8 +39,12 @@
             this.labelCores = new System.Windows.Forms.Label();
             this.labelCilindradas = new System.Windows.Forms.Label();
             this.heartIcon = new System.Windows.Forms.PictureBox();
+            this.editIcon = new System.Windows.Forms.PictureBox();
+            this.trashIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trashIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // labelClientesInteressados
@@ -160,11 +164,41 @@
             this.heartIcon.TabStop = false;
             this.heartIcon.Click += new System.EventHandler(this.heartIcon_Click);
             // 
+            // editIcon
+            // 
+            this.editIcon.BackColor = System.Drawing.Color.White;
+            this.editIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.editIcon.Image = ((System.Drawing.Image)(resources.GetObject("editIcon.Image")));
+            this.editIcon.Location = new System.Drawing.Point(219, 20);
+            this.editIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.editIcon.Name = "editIcon";
+            this.editIcon.Size = new System.Drawing.Size(30, 30);
+            this.editIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.editIcon.TabIndex = 12;
+            this.editIcon.TabStop = false;
+            this.editIcon.Click += new System.EventHandler(this.editIcon_Click);
+            // 
+            // trashIcon
+            // 
+            this.trashIcon.BackColor = System.Drawing.Color.White;
+            this.trashIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.trashIcon.Image = ((System.Drawing.Image)(resources.GetObject("trashIcon.Image")));
+            this.trashIcon.Location = new System.Drawing.Point(249, 20);
+            this.trashIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.trashIcon.Name = "trashIcon";
+            this.trashIcon.Size = new System.Drawing.Size(30, 30);
+            this.trashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.trashIcon.TabIndex = 13;
+            this.trashIcon.TabStop = false;
+            this.trashIcon.Click += new System.EventHandler(this.trashIcon_Click);
+            // 
             // MotoCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.trashIcon);
+            this.Controls.Add(this.editIcon);
             this.Controls.Add(this.heartIcon);
             this.Controls.Add(this.labelCilindradas);
             this.Controls.Add(this.labelCores);
@@ -180,6 +214,8 @@
             this.Size = new System.Drawing.Size(300, 447);
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trashIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +233,7 @@
         private System.Windows.Forms.Label labelCores;
         private System.Windows.Forms.Label labelCilindradas;
         private System.Windows.Forms.PictureBox heartIcon;
+        private System.Windows.Forms.PictureBox editIcon;
+        private System.Windows.Forms.PictureBox trashIcon;
     }
 }

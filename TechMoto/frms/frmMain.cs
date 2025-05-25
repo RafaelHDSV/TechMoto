@@ -48,7 +48,7 @@ namespace TechMoto
 
             if (formAberto == null)
             {
-                frmCadastroMotos frmCadastroMotos = new frmCadastroMotos();
+                frmCadastroMotos frmCadastroMotos = new frmCadastroMotos(null);
                 frmCadastroMotos.MdiParent = this;
                 frmCadastroMotos.Show();
             }

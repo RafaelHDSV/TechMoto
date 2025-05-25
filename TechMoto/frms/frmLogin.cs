@@ -29,7 +29,7 @@ namespace TechMoto
             var motosMockadas = Constantes.CriarMotosMockadas();
             foreach (var moto in motosMockadas)
             {
-                GerenciamentoDeMotos.AdicionarMoto(moto, Classes.GerenciamentoDeMotos.TipoAdicionarMoto.Mocked);
+                GerenciamentoDeMotos.AdicionarMoto(moto, GerenciamentoDeMotos.TipoAdicionarMoto.Mocked);
             }
 
             var usuariosMockados = Constantes.CriarUsuariosMockados();

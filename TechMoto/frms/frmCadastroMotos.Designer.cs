@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroMotos));
             this.inputModelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.inputAno = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.inputImage = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,8 +48,7 @@
             this.inputCor = new System.Windows.Forms.TextBox();
             this.inputQuilometragem = new System.Windows.Forms.TextBox();
             this.inputMarca = new System.Windows.Forms.TextBox();
-            this.inputAno = new System.Windows.Forms.MaskedTextBox();
-            this.groupBox1.SuspendLayout();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // inputModelo
@@ -68,34 +68,42 @@
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 7;
             // 
-            // groupBox1
+            // groupBox
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Controls.Add(this.inputAno);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.inputImage);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.inputPreco);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.inputCilindradas);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
-            this.groupBox1.Controls.Add(this.inputCor);
-            this.groupBox1.Controls.Add(this.inputQuilometragem);
-            this.groupBox1.Controls.Add(this.inputMarca);
-            this.groupBox1.Controls.Add(this.inputModelo);
-            this.groupBox1.Location = new System.Drawing.Point(268, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(16);
-            this.groupBox1.Size = new System.Drawing.Size(500, 436);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cadastro de Motos";
+            this.groupBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox.Controls.Add(this.inputAno);
+            this.groupBox.Controls.Add(this.label9);
+            this.groupBox.Controls.Add(this.inputImage);
+            this.groupBox.Controls.Add(this.label8);
+            this.groupBox.Controls.Add(this.inputPreco);
+            this.groupBox.Controls.Add(this.label6);
+            this.groupBox.Controls.Add(this.inputCilindradas);
+            this.groupBox.Controls.Add(this.label7);
+            this.groupBox.Controls.Add(this.label5);
+            this.groupBox.Controls.Add(this.label4);
+            this.groupBox.Controls.Add(this.label3);
+            this.groupBox.Controls.Add(this.label2);
+            this.groupBox.Controls.Add(this.btnCadastrar);
+            this.groupBox.Controls.Add(this.inputCor);
+            this.groupBox.Controls.Add(this.inputQuilometragem);
+            this.groupBox.Controls.Add(this.inputMarca);
+            this.groupBox.Controls.Add(this.inputModelo);
+            this.groupBox.Location = new System.Drawing.Point(268, 54);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Padding = new System.Windows.Forms.Padding(16);
+            this.groupBox.Size = new System.Drawing.Size(500, 436);
+            this.groupBox.TabIndex = 9;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "Cadastro de Motos";
+            // 
+            // inputAno
+            // 
+            this.inputAno.Location = new System.Drawing.Point(20, 139);
+            this.inputAno.Mask = "0000";
+            this.inputAno.Name = "inputAno";
+            this.inputAno.Size = new System.Drawing.Size(200, 22);
+            this.inputAno.TabIndex = 2;
             // 
             // label9
             // 
@@ -239,27 +247,19 @@
             this.inputMarca.Size = new System.Drawing.Size(200, 22);
             this.inputMarca.TabIndex = 1;
             // 
-            // inputAno
-            // 
-            this.inputAno.Location = new System.Drawing.Point(20, 139);
-            this.inputAno.Mask = "0000";
-            this.inputAno.Name = "inputAno";
-            this.inputAno.Size = new System.Drawing.Size(200, 22);
-            this.inputAno.TabIndex = 2;
-            // 
             // frmCadastroMotos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCadastroMotos";
             this.Text = "TechMoto - Cadastro de Motos";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,7 +269,7 @@
 
         private System.Windows.Forms.TextBox inputModelo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

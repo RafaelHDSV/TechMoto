@@ -47,7 +47,7 @@ namespace TechMoto
             {
                 MotoCard card = new MotoCard();
                 card.SetMoto(moto);
-                card.RenderizarFavoritos(usuarioLogado, moto);
+                card.RenderizarPorCliente(usuarioLogado, moto);
                 card.Width = larguraCard;
                 card.Margin = new Padding(margemHorizontal, 10, 0, 10);
                 flowLayoutPanelMotos.Controls.Add(card);
