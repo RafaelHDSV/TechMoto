@@ -58,7 +58,7 @@ namespace TechMoto
 
         private void listagemDeMotosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListagemMotos frmListagemMotos = new frmListagemMotos();
+            frmListagemMotos frmListagemMotos = new frmListagemMotos(usuarioLogado);
             frmListagemMotos.MdiParent = this;
             frmListagemMotos.Show();
         }
@@ -75,6 +75,23 @@ namespace TechMoto
             frmConfiguracaoUsuario frmConfiguracaoUsuario = new frmConfiguracaoUsuario(usuarioLogado);
             frmConfiguracaoUsuario.MdiParent = this;
             frmConfiguracaoUsuario.Show();
+        }
+
+        private void btnDeslogar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            using (frmLogin loginForm = new frmLogin())
+            {
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    var novoUsuario = loginForm.UsuarioLogado;
+                    frmMain novoMain = new frmMain(novoUsuario);
+                    novoMain.ShowDialog();
+                }
+            }
+
+            this.Close();
         }
     }
 }

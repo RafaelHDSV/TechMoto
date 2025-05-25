@@ -45,5 +45,47 @@ namespace TechMoto
             string clientesInteressadosMessage = moto.ClientesInteressados.Count > 0 ? moto.ClientesInteressados.Count > 1 ? moto.ClientesInteressados.Count + " Interessados" : moto.ClientesInteressados.Count + " Interessado" : "Nenhum Interessado";
             labelClientesInteressados.Text = clientesInteressadosMessage;
         }
+
+        public void RenderizarFavoritos(Classes.Usuario usuarioLogado, Classes.Moto moto)
+        {
+            if (usuarioLogado == null)
+            {
+                heartIcon.Visible = false;
+                labelClientesInteressados.Visible = false;
+                return;
+            }
+
+            switch (usuarioLogado.Nivel)
+            {
+                case Classes.UsuarioNivel.Cliente:
+                    heartIcon.Visible = true;
+                    labelClientesInteressados.Visible = false;
+
+                    try
+                    {
+                        using (var client = new WebClient())
+                        {
+                            string heartIconImage = moto.ClientesInteressados.Contains(usuarioLogado) ? "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\assets\\heart-fill.png" : "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\assets\\heart.png";
+                            var stream = client.OpenRead(heartIconImage);
+                            heartIcon.Image = Image.FromStream(stream);
+                        }
+                    }
+                    catch
+                    {
+                        heartIcon.Image = Image.FromStream(new WebClient().OpenRead("https://imgs.search.brave.com/VOnq_c1-tNc42ruMDUJXyx5fWx8CB4VvZ7iolJTiWJc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vZzU3MndN/aWU2R21WU3FvVWhV/bG1TLVlsT2daZm85/N1EyN2ZjNTJpcVYz/MC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkw/TXk1bS9kR05rYmk1/dVpYUXZhbkJuL0x6/RXhMemN3THpReEx6/QTIvTHpNMk1GOUdY/ekV4TnpBMC9NVEEy/TWpSZlpWTlVZMm8z/L2RrbzNPRVJET1hO/YVowWm4vUWxKS1Yx/TTNWek40Y21Fdy9R/WGd1YW5Cbg"));
+                    }
+
+
+                    break;
+                case Classes.UsuarioNivel.Loja:
+                    heartIcon.Visible = false;
+                    labelClientesInteressados.Visible = true;
+                    break;
+                default:
+                    heartIcon.Visible = false;
+                    labelClientesInteressados.Visible = false;
+                    break;
+            }
+        }
     }
 }

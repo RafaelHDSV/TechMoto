@@ -38,7 +38,9 @@
             this.labelMarca = new System.Windows.Forms.Label();
             this.labelCores = new System.Windows.Forms.Label();
             this.labelCilindradas = new System.Windows.Forms.Label();
+            this.heartIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // labelClientesInteressados
@@ -144,11 +146,25 @@
             this.labelCilindradas.TabIndex = 10;
             this.labelCilindradas.Text = "250cc";
             // 
+            // heartIcon
+            // 
+            this.heartIcon.BackColor = System.Drawing.Color.Transparent;
+            this.heartIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.heartIcon.Image = ((System.Drawing.Image)(resources.GetObject("heartIcon.Image")));
+            this.heartIcon.Location = new System.Drawing.Point(20, 400);
+            this.heartIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.heartIcon.Name = "heartIcon";
+            this.heartIcon.Size = new System.Drawing.Size(30, 30);
+            this.heartIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heartIcon.TabIndex = 11;
+            this.heartIcon.TabStop = false;
+            // 
             // MotoCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.heartIcon);
             this.Controls.Add(this.labelCilindradas);
             this.Controls.Add(this.labelCores);
             this.Controls.Add(this.labelMarca);
@@ -162,6 +178,7 @@
             this.Padding = new System.Windows.Forms.Padding(16);
             this.Size = new System.Drawing.Size(300, 447);
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +195,6 @@
         private System.Windows.Forms.Label labelMarca;
         private System.Windows.Forms.Label labelCores;
         private System.Windows.Forms.Label labelCilindradas;
+        private System.Windows.Forms.PictureBox heartIcon;
     }
 }

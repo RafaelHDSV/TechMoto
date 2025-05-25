@@ -35,6 +35,7 @@
             this.listagemDeMotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listagemDeMotosTabelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDeUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDeslogar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.configuraçõesDeUsuárioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(2047, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,16 +89,27 @@
             this.configuraçõesDeUsuárioToolStripMenuItem.Text = "Configurações de Usuário";
             this.configuraçõesDeUsuárioToolStripMenuItem.Click += new System.EventHandler(this.configuraçõesDeUsuárioToolStripMenuItem_Click);
             // 
+            // btnDeslogar
+            // 
+            this.btnDeslogar.Location = new System.Drawing.Point(1917, 44);
+            this.btnDeslogar.Name = "btnDeslogar";
+            this.btnDeslogar.Size = new System.Drawing.Size(118, 39);
+            this.btnDeslogar.TabIndex = 3;
+            this.btnDeslogar.Text = "Deslogar";
+            this.btnDeslogar.UseVisualStyleBackColor = true;
+            this.btnDeslogar.Click += new System.EventHandler(this.btnDeslogar_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(2047, 554);
+            this.Controls.Add(this.btnDeslogar);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "TechMoto";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -117,5 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem listagemDeMotosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listagemDeMotosTabelaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesDeUsuárioToolStripMenuItem;
+        private System.Windows.Forms.Button btnDeslogar;
     }
 }

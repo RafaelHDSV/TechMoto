@@ -13,12 +13,15 @@ namespace TechMoto
 {
     public partial class frmListagemMotos : Form
     {
+        private Classes.Usuario usuarioLogado;
         private Timer resizeTimer = new Timer();
 
-        public frmListagemMotos()
+        public frmListagemMotos(Classes.Usuario usuarioLogado)
         {
             InitializeComponent();
             CarregarMotos();
+
+            this.usuarioLogado = usuarioLogado;
 
             flowLayoutPanelMotos.WrapContents = true;
             flowLayoutPanelMotos.FlowDirection = FlowDirection.LeftToRight;
@@ -44,6 +47,7 @@ namespace TechMoto
             {
                 MotoCard card = new MotoCard();
                 card.SetMoto(moto);
+                card.RenderizarFavoritos(usuarioLogado, moto);
                 card.Width = larguraCard;
                 card.Margin = new Padding(margemHorizontal, 10, 0, 10);
                 flowLayoutPanelMotos.Controls.Add(card);
