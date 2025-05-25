@@ -31,10 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroMotos));
             this.inputModelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.inputTempoDeUso = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.inputImage = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.inputPreco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.inputCilindradas = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,10 +53,10 @@
             // 
             // inputModelo
             // 
-            this.inputModelo.Location = new System.Drawing.Point(48, 73);
+            this.inputModelo.Location = new System.Drawing.Point(20, 73);
             this.inputModelo.Margin = new System.Windows.Forms.Padding(4);
             this.inputModelo.Name = "inputModelo";
-            this.inputModelo.Size = new System.Drawing.Size(152, 22);
+            this.inputModelo.Size = new System.Drawing.Size(200, 22);
             this.inputModelo.TabIndex = 0;
             // 
             // label1
@@ -64,19 +68,16 @@
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 7;
             // 
-            // inputTempoDeUso
-            // 
-            this.inputTempoDeUso.Location = new System.Drawing.Point(275, 73);
-            this.inputTempoDeUso.Margin = new System.Windows.Forms.Padding(4);
-            this.inputTempoDeUso.Name = "inputTempoDeUso";
-            this.inputTempoDeUso.Size = new System.Drawing.Size(153, 22);
-            this.inputTempoDeUso.TabIndex = 1;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.inputImage);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.inputPreco);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.inputCilindradas);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -87,40 +88,83 @@
             this.groupBox1.Controls.Add(this.inputQuilometragem);
             this.groupBox1.Controls.Add(this.inputMarca);
             this.groupBox1.Controls.Add(this.inputModelo);
-            this.groupBox1.Controls.Add(this.inputTempoDeUso);
-            this.groupBox1.Location = new System.Drawing.Point(284, 42);
+            this.groupBox1.Location = new System.Drawing.Point(268, 54);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(487, 436);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(16);
+            this.groupBox1.Size = new System.Drawing.Size(500, 436);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro de Motos";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(277, 251);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 16);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Imagem (url)";
+            // 
+            // inputImage
+            // 
+            this.inputImage.Location = new System.Drawing.Point(280, 271);
+            this.inputImage.Margin = new System.Windows.Forms.Padding(4);
+            this.inputImage.Name = "inputImage";
+            this.inputImage.Size = new System.Drawing.Size(200, 22);
+            this.inputImage.TabIndex = 25;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 251);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Preço";
+            // 
+            // inputPreco
+            // 
+            this.inputPreco.Location = new System.Drawing.Point(20, 271);
+            this.inputPreco.Margin = new System.Windows.Forms.Padding(4);
+            this.inputPreco.Name = "inputPreco";
+            this.inputPreco.Size = new System.Drawing.Size(200, 22);
+            this.inputPreco.TabIndex = 23;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(277, 185);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Cilindradas";
+            // 
+            // inputCilindradas
+            // 
+            this.inputCilindradas.Location = new System.Drawing.Point(280, 205);
+            this.inputCilindradas.Margin = new System.Windows.Forms.Padding(4);
+            this.inputCilindradas.Name = "inputCilindradas";
+            this.inputCilindradas.Size = new System.Drawing.Size(200, 22);
+            this.inputCilindradas.TabIndex = 21;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(271, 133);
+            this.label7.Location = new System.Drawing.Point(277, 119);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 16);
             this.label7.TabIndex = 20;
             this.label7.Text = "Quilometragem (km)";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(275, 53);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 16);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Tempo de uso";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(275, 213);
+            this.label5.Location = new System.Drawing.Point(17, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 16);
@@ -130,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 213);
+            this.label4.Location = new System.Drawing.Point(17, 185);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 16);
@@ -140,7 +184,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 133);
+            this.label3.Location = new System.Drawing.Point(277, 53);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
@@ -150,7 +194,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 53);
+            this.label2.Location = new System.Drawing.Point(17, 53);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
@@ -159,44 +203,45 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(163, 332);
+            this.btnCadastrar.Location = new System.Drawing.Point(172, 351);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(163, 34);
             this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // inputAno
             // 
-            this.inputAno.Location = new System.Drawing.Point(279, 233);
+            this.inputAno.Location = new System.Drawing.Point(20, 139);
             this.inputAno.Margin = new System.Windows.Forms.Padding(4);
             this.inputAno.Name = "inputAno";
-            this.inputAno.Size = new System.Drawing.Size(149, 22);
+            this.inputAno.Size = new System.Drawing.Size(200, 22);
             this.inputAno.TabIndex = 5;
             // 
             // inputCor
             // 
-            this.inputCor.Location = new System.Drawing.Point(48, 233);
+            this.inputCor.Location = new System.Drawing.Point(20, 205);
             this.inputCor.Margin = new System.Windows.Forms.Padding(4);
             this.inputCor.Name = "inputCor";
-            this.inputCor.Size = new System.Drawing.Size(152, 22);
+            this.inputCor.Size = new System.Drawing.Size(200, 22);
             this.inputCor.TabIndex = 4;
             // 
             // inputQuilometragem
             // 
-            this.inputQuilometragem.Location = new System.Drawing.Point(275, 153);
+            this.inputQuilometragem.Location = new System.Drawing.Point(280, 139);
             this.inputQuilometragem.Margin = new System.Windows.Forms.Padding(4);
             this.inputQuilometragem.Name = "inputQuilometragem";
-            this.inputQuilometragem.Size = new System.Drawing.Size(153, 22);
+            this.inputQuilometragem.Size = new System.Drawing.Size(200, 22);
             this.inputQuilometragem.TabIndex = 3;
             // 
             // inputMarca
             // 
-            this.inputMarca.Location = new System.Drawing.Point(48, 153);
+            this.inputMarca.Location = new System.Drawing.Point(280, 73);
             this.inputMarca.Margin = new System.Windows.Forms.Padding(4);
             this.inputMarca.Name = "inputMarca";
-            this.inputMarca.Size = new System.Drawing.Size(152, 22);
+            this.inputMarca.Size = new System.Drawing.Size(200, 22);
             this.inputMarca.TabIndex = 2;
             // 
             // frmCadastroMotos
@@ -221,10 +266,8 @@
 
         private System.Windows.Forms.TextBox inputModelo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox inputTempoDeUso;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -234,5 +277,11 @@
         private System.Windows.Forms.TextBox inputCor;
         private System.Windows.Forms.TextBox inputQuilometragem;
         private System.Windows.Forms.TextBox inputMarca;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox inputImage;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox inputPreco;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox inputCilindradas;
     }
 }
