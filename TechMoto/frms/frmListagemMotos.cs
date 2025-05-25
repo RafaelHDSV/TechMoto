@@ -13,10 +13,10 @@ namespace TechMoto
 {
     public partial class frmListagemMotos : Form
     {
-        private Classes.Usuario usuarioLogado;
+        private Usuario usuarioLogado;
         private Timer resizeTimer = new Timer();
 
-        public frmListagemMotos(Classes.Usuario usuarioLogado)
+        public frmListagemMotos(Usuario usuarioLogado)
         {
             InitializeComponent();
             CarregarMotos();
@@ -31,11 +31,11 @@ namespace TechMoto
             resizeTimer.Tick += ResizeTimer_Tick;
         }
 
-        private void CarregarMotos()
+        public void CarregarMotos()
         {
             flowLayoutPanelMotos.Controls.Clear();
 
-            List<Classes.Moto> listaMotos = Classes.GerenciamentoDeMotos.ListarTodasMotos();
+            List<Moto> listaMotos = GerenciamentoDeMotos.ListarTodasMotos();
 
             int larguraPainel = flowLayoutPanelMotos.ClientSize.Width;
             int larguraCard = 230;

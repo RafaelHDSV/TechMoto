@@ -61,11 +61,17 @@ namespace TechMoto
         private void formulárioDeInteresseDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formAberto = Application.OpenForms.OfType<frmInteresseCliente>().FirstOrDefault();
+            var listagemMotosAberta = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
 
             if (formAberto == null)
             {
                 frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado, null);
                 frmInteresseCliente.MdiParent = this;
+                frmInteresseCliente.FormClosed += (s, args) =>
+                {
+                    var listagemAtual = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
+                    listagemAtual?.CarregarMotos(); // Captura no momento do fechamento
+                };
                 frmInteresseCliente.Show();
             } else
             {
@@ -79,9 +85,9 @@ namespace TechMoto
 
             if (formAberto == null)
             {
-                frmListagemMotos frm = new frmListagemMotos(usuarioLogado);
-                frm.MdiParent = this;
-                frm.Show();
+                frmListagemMotos frmListagemMotos = new frmListagemMotos(usuarioLogado);
+                frmListagemMotos.MdiParent = this;
+                frmListagemMotos.Show();
             }
             else
             {

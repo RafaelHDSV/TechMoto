@@ -86,6 +86,9 @@ namespace TechMoto
 
             Classes.GerenciamentoDeMotos.InformarInteresse(moto, usuarioLogado);
 
+            var formListagemAberta = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
+            formListagemAberta?.CarregarMotos();
+
             inputNome.Clear();
             inputTelefone.Clear();
             inputOferta.Clear();
