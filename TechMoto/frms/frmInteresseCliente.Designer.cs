@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInteresseCliente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.inputMotos = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.inputOferta = new System.Windows.Forms.TextBox();
             this.inputTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.btnInteresse = new System.Windows.Forms.Button();
             this.inputObservacoes = new System.Windows.Forms.TextBox();
             this.inputNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.inputMotos = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario de Interesse";
+            // 
+            // inputMotos
+            // 
+            this.inputMotos.FormattingEnabled = true;
+            this.inputMotos.Location = new System.Drawing.Point(298, 64);
+            this.inputMotos.Name = "inputMotos";
+            this.inputMotos.Size = new System.Drawing.Size(200, 24);
+            this.inputMotos.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(301, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Moto *";
             // 
             // inputOferta
             // 
@@ -100,9 +118,9 @@
             this.label4.Location = new System.Drawing.Point(295, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Oferta";
+            this.label4.Text = "Oferta *";
             // 
             // label3
             // 
@@ -110,9 +128,9 @@
             this.label3.Location = new System.Drawing.Point(19, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Telefone";
+            this.label3.Text = "Telefone *";
             // 
             // label1
             // 
@@ -120,9 +138,9 @@
             this.label1.Location = new System.Drawing.Point(20, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nome *";
             // 
             // btnInteresse
             // 
@@ -151,24 +169,6 @@
             this.inputNome.Name = "inputNome";
             this.inputNome.Size = new System.Drawing.Size(200, 22);
             this.inputNome.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Moto";
-            // 
-            // inputMotos
-            // 
-            this.inputMotos.FormattingEnabled = true;
-            this.inputMotos.Location = new System.Drawing.Point(298, 64);
-            this.inputMotos.Name = "inputMotos";
-            this.inputMotos.Size = new System.Drawing.Size(200, 24);
-            this.inputMotos.TabIndex = 13;
             // 
             // frmInteresseCliente
             // 

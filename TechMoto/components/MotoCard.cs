@@ -14,7 +14,8 @@ namespace TechMoto
 {
     public partial class MotoCard : UserControl
     {
-        //private usuarioLogado = 
+        private Classes.Usuario usuarioLogado;
+        private Classes.Moto moto;
 
         public MotoCard()
         {
@@ -23,6 +24,8 @@ namespace TechMoto
 
         public void SetMoto(Classes.Moto moto)
         {
+            this.moto = moto;
+
             try
             {
                 using (var client = new WebClient())
@@ -58,8 +61,11 @@ namespace TechMoto
                 return;
             }
 
+            this.usuarioLogado = usuarioLogado;
+
             switch (usuarioLogado.Nivel)
             {
+
                 case Classes.UsuarioNivel.Cliente:
                     heartIcon.Visible = true;
                     labelClientesInteressados.Visible = false;
@@ -90,18 +96,22 @@ namespace TechMoto
 
         private void heartIcon_Click(object sender, EventArgs e)
         {
-            //var formAberto = Application.OpenForms.OfType<frmInteresseCliente>().FirstOrDefault();
+            var formAberto = Application.OpenForms.OfType<frmInteresseCliente>().FirstOrDefault();
 
-            //if (formAberto == null)
-            //{
-            //    frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado);
-            //    frmInteresseCliente.MdiParent = this;
-            //    frmInteresseCliente.Show();
-            //}
-            //else
-            //{
-            //    formAberto.BringToFront();
-            //}
+            if (formAberto == null)
+            {
+                frmInteresseCliente frm = new frmInteresseCliente(usuarioLogado, moto);
+                Form parentForm = this.FindForm();
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.Show(parentForm);
+            }
+            else
+            {
+                formAberto.AtualizarMotoSelecionada(moto);
+                formAberto.BringToFront();
+                formAberto.Activate();
+            }
         }
+
     }
 }

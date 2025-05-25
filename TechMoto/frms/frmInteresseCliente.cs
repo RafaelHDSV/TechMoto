@@ -14,7 +14,7 @@ namespace TechMoto
     {
         private Classes.Usuario usuarioLogado;
 
-        public frmInteresseCliente(Classes.Usuario usuarioLogado)
+        public frmInteresseCliente(Classes.Usuario usuarioLogado, Classes.Moto moto)
         {
             InitializeComponent();
 
@@ -26,9 +26,23 @@ namespace TechMoto
             inputMotos.DisplayMember = "Modelo";
             inputMotos.ValueMember = "_id";
 
+            if (moto != null)
+            {
+                inputMotos.SelectedValue = moto._id;
+            }
+
             inputOferta.TextChanged += inputOferta_TextChanged;
             inputOferta.Text = "R$ 0,00";
         }
+
+        public void AtualizarMotoSelecionada(Classes.Moto moto)
+        {
+            if (moto != null)
+            {
+                inputMotos.SelectedValue = moto._id;
+            }
+        }
+
 
         private void inputOferta_TextChanged(object sender, EventArgs e)
         {
@@ -52,6 +66,18 @@ namespace TechMoto
 
         private void btnInteresse_Click(object sender, EventArgs e)
         {
+            bool hasRemainingInfo =
+                string.IsNullOrWhiteSpace(inputNome.Text) ||
+                inputMotos.SelectedValue == null ||
+                string.IsNullOrWhiteSpace(inputTelefone.Text) || inputTelefone.Text == "(  )      -" ||
+                string.IsNullOrWhiteSpace(inputOferta.Text) || inputOferta.Text == "R$ 0,00";
+
+            if (hasRemainingInfo)
+            {
+                MessageBox.Show("Preencha todos os campos obrigatórios.");
+                return;
+            }
+
             string nome = inputNome.Text;
             string moto = inputMotos.SelectedValue.ToString();
             string telefone = inputTelefone.Text;
@@ -59,6 +85,12 @@ namespace TechMoto
             string observacoes = inputObservacoes.Text;
 
             Classes.GerenciamentoDeMotos.InformarInteresse(moto, usuarioLogado);
+
+            inputNome.Clear();
+            inputTelefone.Clear();
+            inputOferta.Clear();
+            inputObservacoes.Clear();
+            this.Close();
         }
     }
 }

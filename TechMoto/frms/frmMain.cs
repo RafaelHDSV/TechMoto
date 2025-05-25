@@ -64,7 +64,7 @@ namespace TechMoto
 
             if (formAberto == null)
             {
-                frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado);
+                frmInteresseCliente frmInteresseCliente = new frmInteresseCliente(usuarioLogado, null);
                 frmInteresseCliente.MdiParent = this;
                 frmInteresseCliente.Show();
             } else
