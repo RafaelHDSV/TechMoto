@@ -81,7 +81,7 @@ namespace TechMoto
 
         public class Moto
         {
-            public string _id { get; set; }
+            public Guid _id { get; set; }
             public string Modelo { get; set; }
             public string Marca { get; set; }
             public int Ano { get; set; }
@@ -91,6 +91,11 @@ namespace TechMoto
             public double Preco { get; set; }
             public string Imagem { get; set; }
             public List<Usuario> ClientesInteressados { get; set; } = new List<Usuario>();
+
+            public Moto()
+            {
+                _id = Guid.NewGuid();
+            }
 
             public string ExibirInformacoes()
             {
@@ -157,8 +162,6 @@ namespace TechMoto
 
             public static void AdicionarMoto(Moto moto, TipoAdicionarMoto tipo)
             {
-                moto._id = $"{moto.Modelo.ToLower().Replace(" ", "-")}";
-
                 if (listaMotos.Any(m => m._id == moto._id))
                 {
                     return;
@@ -168,12 +171,12 @@ namespace TechMoto
                 if (tipo == TipoAdicionarMoto.Formulario) MessageBox.Show("Moto cadastrada com sucesso!");
             }
 
-            public static void RemoverMoto(string id)
+            public static void RemoverMoto(Guid id)
             {
                 listaMotos.RemoveAll(m => m._id == id);
             }
 
-            public static Moto BuscarMoto(string id)
+            public static Moto BuscarMoto(Guid id)
             {
                 return listaMotos.FirstOrDefault(m => m._id == id);
             }
@@ -183,7 +186,7 @@ namespace TechMoto
                 return listaMotos;
             }
 
-            public static void EditarMoto(string id, Moto novaMoto)
+            public static void EditarMoto(Guid id, Moto novaMoto)
             {
                 var motoExistente = listaMotos.FirstOrDefault(m => m._id == id);
                 if (motoExistente != null)
@@ -201,7 +204,8 @@ namespace TechMoto
 
             public static void InformarInteresse(string idMoto, Usuario usuario)
             {
-                var moto = BuscarMoto(idMoto);
+                Guid guidId = Guid.Parse(idMoto);
+                var moto = BuscarMoto(guidId);
                 if (moto != null && !moto.ClientesInteressados.Any(u => u._id == usuario._id))
                 {
                     moto.ClientesInteressados.Add(usuario);
