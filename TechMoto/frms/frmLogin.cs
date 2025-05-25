@@ -10,12 +10,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TechMoto.Classes;
 
 namespace TechMoto
 {
     public partial class frmLogin : Form
     {
-        public Classes.Usuario UsuarioLogado { get; private set; }
+        public Usuario UsuarioLogado { get; private set; }
 
         public frmLogin()
         {
@@ -26,23 +27,25 @@ namespace TechMoto
         private void AdicionarDadosMockados()
         {
             var motosMockadas = Constantes.CriarMotosMockadas();
+            GerenciamentoDeMotos.listaMotos.Clear();
 
             foreach (var moto in motosMockadas)
             {
-                Classes.GerenciamentoDeMotos.AdicionarMoto(moto);
+                GerenciamentoDeMotos.AdicionarMoto(moto);
             }
 
             var usuariosMockados = Constantes.CriarUsuariosMockados();
+            GerenciamentoDeMotos.listaUsuarios.Clear();
 
             foreach (var usuario in usuariosMockados)
             {
-                Classes.GerenciamentoDeMotos.AdicionarUsuario(usuario);
+                GerenciamentoDeMotos.AdicionarUsuario(usuario);
             }
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            var usuario = Classes.GerenciamentoDeMotos.listaUsuarios
+            var usuario = GerenciamentoDeMotos.listaUsuarios
                 .FirstOrDefault(u => u.Email == inputEmail.Text && u.Senha == inputSenha.Text);
 
             if (usuario != null)

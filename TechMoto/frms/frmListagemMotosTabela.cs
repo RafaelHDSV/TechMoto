@@ -19,7 +19,8 @@ namespace TechMoto
 
         private void frmListagemMotosTabela_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Classes.GerenciamentoDeMotos.listaMotos;
+            dataGridMotos.Rows.Clear();
+            dataGridMotos.DataSource = Classes.GerenciamentoDeMotos.listaMotos;
         }
     }
 }

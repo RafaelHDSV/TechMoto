@@ -9,6 +9,8 @@ namespace TechMoto
 {
     internal static class Program
     {
+        public static Classes.Usuario UsuarioTroca = null;
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -17,13 +19,34 @@ namespace TechMoto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            using (frmLogin loginForm = new frmLogin())
+
+        reiniciar:
+            Classes.Usuario usuarioLogado;
+
+            if (UsuarioTroca != null)
             {
-                if (loginForm.ShowDialog() == DialogResult.OK)
+                usuarioLogado = UsuarioTroca;
+                UsuarioTroca = null;
+            }
+            else
+            {
+                using (frmLogin loginForm = new frmLogin())
                 {
-                    var usuarioLogado = loginForm.UsuarioLogado;
-                    Application.Run(new frmMain(usuarioLogado));
+                    if (loginForm.ShowDialog() != DialogResult.OK)
+                        return; 
+
+                    usuarioLogado = loginForm.UsuarioLogado;
                 }
+            }
+
+            using (frmMain mainForm = new frmMain(usuarioLogado))
+            {
+                Application.Run(mainForm);
+            }
+
+            if (UsuarioTroca != null)
+            {
+                goto reiniciar;
             }
         }
     }
