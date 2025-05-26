@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|c:\\users\\rafae\\onedrive\\documentos\\dev\\techmoto\\techmoto\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|c:\\users\\rafae\\onedrive\\documentos\\dev\\techmoto\\techmoto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 236,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Classes.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\Classes.cs",
-              "RelativeDocumentMoniker": "TechMoto\\Classes.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\Classes.cs",
-              "RelativeToolTip": "TechMoto\\Classes.cs",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAwwM4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T22:40:16.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\Program.cs",
-              "RelativeDocumentMoniker": "TechMoto\\Program.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\Program.cs",
-              "RelativeToolTip": "TechMoto\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T22:40:10.295Z",
-              "EditorCaption": ""
             }
           ]
         }
