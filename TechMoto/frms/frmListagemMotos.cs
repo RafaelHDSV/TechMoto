@@ -14,6 +14,7 @@ namespace TechMoto
     public partial class frmListagemMotos : Form
     {
         private Usuario usuarioLogado;
+        private List<Moto> motos;
         private Timer resizeTimer = new Timer();
 
         public frmListagemMotos(Usuario usuarioLogado)
@@ -29,6 +30,8 @@ namespace TechMoto
 
             resizeTimer.Interval = 300; // 300 ms de debounce
             resizeTimer.Tick += ResizeTimer_Tick;
+
+            this.Text = $"TechMoto - Listagem de Motos ({motos.Count()})";
         }
 
         public void CarregarMotos()
@@ -36,6 +39,7 @@ namespace TechMoto
             flowLayoutPanelMotos.Controls.Clear();
 
             List<Moto> listaMotos = GerenciamentoDeMotos.ListarTodasMotos();
+            this.motos = listaMotos;
 
             int larguraPainel = flowLayoutPanelMotos.ClientSize.Width;
             int larguraCard = 230;
