@@ -21,6 +21,8 @@ namespace TechMoto
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            this.Text = $"TechMoto - {usuarioLogado.Nome} - {usuarioLogado.Nivel}";
+
             listagemDeMotosToolStripMenuItem.Visible=true;
             listagemDeMotosTabelaToolStripMenuItem.Visible = true;
             configuraçõesDeUsuárioToolStripMenuItem.Visible=true;
