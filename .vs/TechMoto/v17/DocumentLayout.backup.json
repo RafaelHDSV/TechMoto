@@ -3,35 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|c:\\users\\rafae\\onedrive\\documentos\\dev\\techmoto\\techmoto\\frms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlistagemmotostabela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlistagemmotostabela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlistagemmotostabela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlistagemmotostabela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|c:\\users\\rafae\\onedrive\\documentos\\dev\\techmoto\\techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|c:\\users\\rafae\\onedrive\\documentos\\dev\\techmoto\\techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{88BDC3BC-EE84-4065-80EC-315EC7407886}|TechMoto\\TechMoto.csproj|solutionrelative:techmoto\\frms\\frmlistagemmotos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -55,95 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmMain.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmMain.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmMain.cs",
-              "RelativeToolTip": "TechMoto\\frms\\frmMain.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwC8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:42.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmMain.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmMain.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmMain.cs [Design]",
-              "RelativeToolTip": "TechMoto\\frms\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:40.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmLogin.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmLogin.cs",
-              "RelativeToolTip": "TechMoto\\frms\\frmLogin.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:15.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmLogin.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmLogin.cs [Design]",
-              "RelativeToolTip": "TechMoto\\frms\\frmLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:13.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmListagemMotosTabela.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "RelativeToolTip": "TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:11.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmListagemMotosTabela.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "RelativeDocumentMoniker": "TechMoto\\frms\\frmListagemMotosTabela.cs",
-              "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotosTabela.cs [Design]",
-              "RelativeToolTip": "TechMoto\\frms\\frmListagemMotosTabela.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:10:10.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "frmListagemMotos.cs",
               "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotos.cs",
               "RelativeDocumentMoniker": "TechMoto\\frms\\frmListagemMotos.cs",
               "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotos.cs",
               "RelativeToolTip": "TechMoto\\frms\\frmListagemMotos.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCEAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:09:12.598Z"
+              "WhenOpened": "2025-05-27T22:12:46.646Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "frmListagemMotos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotos.cs",
               "RelativeDocumentMoniker": "TechMoto\\frms\\frmListagemMotos.cs",
               "ToolTip": "C:\\Users\\rafae\\OneDrive\\Documentos\\DEV\\TechMoto\\TechMoto\\frms\\frmListagemMotos.cs [Design]",
               "RelativeToolTip": "TechMoto\\frms\\frmListagemMotos.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T07:09:11.146Z"
+              "WhenOpened": "2025-05-27T22:10:21.958Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
