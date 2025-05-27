@@ -19,12 +19,24 @@ namespace TechMoto.frms
             InitializeComponent();
 
             this.clientesInteressados = clientesInteressados;
+
+            this.Text = "Lista de Interessados - " + clientesInteressados.Count + " interessados";
         }
 
         private void frmListagemInteressados_Load(object sender, EventArgs e)
         {
             dataGridInteresse.Rows.Clear();
-            dataGridInteresse.DataSource = clientesInteressados;
+            var dadosFormatados = clientesInteressados.Select(i => new
+            {
+                NomeUsuario = i.Usuario.Nome,
+                EmailUsuario = i.Usuario.Email,
+                i.Telefone,
+                ModeloMoto = i.Moto.Modelo,
+                MarcaMoto = i.Moto.Marca,
+                i.Oferta,
+                i.Observacoes
+            }).ToList();
+            dataGridInteresse.DataSource = dadosFormatados;
         }
     }
 }
