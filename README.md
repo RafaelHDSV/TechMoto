@@ -23,49 +23,20 @@
 
 TechMoto é um sistema desktop desenvolvido em Windows Forms com C#, projetado para gerenciar o estoque de motos em lojas e permitir que clientes demonstrem interesse pelos veículos disponíveis. O objetivo principal é facilitar a compra e venda de motos em um ambiente similar a um marketplace.
 
-🔹 **Principais características:**
-- Cadastro e listagem de livros
-- Cadastro e listagem de alunos
-- Cadastro e listagem de professores
-- Gerenciamento de empréstimo, com devoluções e empréstimos
-- Relatórios organizados com tabelas sobre os dados salvos
-- Interface MDI (Multiple Document Interface)
-- Validações de dados integradas
-
 ⚠️ **Observação:** O sistema não utiliza banco de dados permanente - todas as informações são armazenadas apenas em memória e serão perdidas ao fechar a aplicação.
 
 <h2 id="features">✨ Funcionalidades</h2>
 
-- **Cadastro de Livros**
-  - Adição de livros com as propriedades:
-    - Título
-    - Autor
-    - Ano
-    - ISBN
-    - Status (Disponível / Emprestado) _valor inicial é disponível_
-  
-- **Cadastro de Usuários**
-  - Adição de usuários com dois tipos diferentes e as propriedades:
-    - Nome
-    - Tipo (Aluno / Professor)
-    - Curso (_aluno_)
-    - Número de mátricula (_aluno_)
-    - Departamento (_professor_)
-    - Número de Registro (_professor_)
+- 🏪 **Loja**
+  - Cadastro de novas motos com foto, modelo, marca, cilindrada, cor, preço e descrição
+  - Listagem de motos com visualização por imagem e em tabela
+  - Edição e exclusão de motos cadastradas.
+  - Visualização de clientes interessados em cada moto.
 
-- **Controle de Empréstimos**
-  - Controle de empréstimos e devoluções com as propriedades:
-    - Usuário _(classe Usuário)_
-    - Livro _(classe Livro)_
-    - Status _(Disponível / Emprestado)_
-
-- **Relatórios**
-  - Tabela de alunos cadastrados
-  - Tabela de professores cadastrados
-  - Tabela de livros cadastrados
-  - Tabela de livros disponíveis cadastrados
-  - Tabela de livros emprestados cadastrados
-  - Tabela de histórico de empréstimos
+- 👤 **Cliente**
+  - Cadastro e atualização de dados pessoais (nome, CPF, e-mail, telefone)
+  - Visualização do catálogo de motos disponíveis
+  - Demonstração de interesse por uma moto específica (com mensagem personalizada, telefone e proposta)
 
 <h2 id="started">🚀 Como Executar o Projeto</h2>
 
@@ -76,14 +47,14 @@ TechMoto é um sistema desktop desenvolvido em Windows Forms com C#, projetado p
 ### Passo a Passo
 
 1. Clone o repositório:
-```bash
-git clone https://github.com/RafaelHDSV/TechMoto.git
-```
+  ```bash
+  git clone https://github.com/RafaelHDSV/TechMoto.git
+  ```
 
 2.  Acesse a pasta do projeto:
-```bash
-cd Controle-de-Estoque-CSharp-IPOO
-```
+  ```bash
+  cd Controle-de-Estoque-CSharp-IPOO
+  ```
 
 3.  Abra o arquivo .sln no Visual Studio 2022
 
@@ -93,27 +64,43 @@ cd Controle-de-Estoque-CSharp-IPOO
 
 | Formulário | Descrição
 |----------------------|-----------------------------------------------------
-| MainForm | Tela principal (MDI Container) com menu de acesso a todas as funcionalidades
-| frmCadastroDeLivros | Formulário para cadastro de novos livros no sistema
-| frmCadastroDeUsuarios | Formulário para cadastro de novos usuários no sistema
-| frmControleDeEmprestimos | Formulário para controle de empréstimos e devoluções
-| frmRelatorios | Formulário com tabelas sobre todos os dados salvos no sistema
+| frmMain | tela principal (MDI), que abre os outros formulários
+| frmCadastroMotos | cadastro de motos no estoque
+| frmListagemMotos | controle de estoque (adicionar/remover motos, visualizar interessados)
+| frmListagemMotosTabela | controle de estoque em tabela
+| frmLogin | tela de autenticação
+| frmConfiguracaoUsuario | atualização de conta do usuário (loja ou cliente)
+| frmInteresseCliente | formulário para clientes demonstrarem interesse em uma moto
+| frmListagemInteressados | listagem de clientes interessados por moto
 
 <h2 id="screenshots">📷 Screenshots</h2>
 
-Tela Principal (MDI Container)
-![image](https://github.com/user-attachments/assets/5a939737-cdef-4512-9a1b-f3b2faa80155)
+frmLogin
+![image](https://github.com/user-attachments/assets/2a5be513-c0ea-4c45-8431-570299427437)
 
-Cadastro de Livros
-![image](https://github.com/user-attachments/assets/b559dc83-ef77-4d22-8ead-4163db198fb6)
+frmMain
+![image](https://github.com/user-attachments/assets/74bf6234-8808-4493-93f4-f5466f77d21c)
 
-Cadastro de Usuários
-![image](https://github.com/user-attachments/assets/c94f45ff-ff05-42e2-9a7a-0d979e6507f6)
+frmInteresseCliente
+![image](https://github.com/user-attachments/assets/1ed10be4-e749-473b-a264-178c447d1df4)
 
-Controle de Empréstimos
-![image](https://github.com/user-attachments/assets/de892b24-6adf-4c24-990f-8067144859cb)
+frmCadastroMotos
+![image](https://github.com/user-attachments/assets/4f4211a6-fc46-4dde-aa61-2e5f4294e11c)
 
-Relatórios
-![image](https://github.com/user-attachments/assets/4b45d5d0-4c0c-4eca-8131-6dc003ec19e7)
+frmListagemMotos
+![image](https://github.com/user-attachments/assets/ddd19c83-5ae2-472d-9608-c7cf80148802)
+_nível cliente_
+
+![image](https://github.com/user-attachments/assets/80876fe6-766b-453f-966e-b9645088aa1f)
+_nível loja_
+
+frmListagemMotosTabela
+![image](https://github.com/user-attachments/assets/1fbea2f2-adf4-43a5-8d34-0985374b6718)
+
+frmConfiguracaoUsuario
+![image](https://github.com/user-attachments/assets/07891814-d52d-4beb-9d30-389c21d57038)
+
+frmListagemInteressados
+![image](https://github.com/user-attachments/assets/8b873269-afd4-4cfc-8f44-d79242b56bfb)
 
 <p align="center"> Desenvolvido com ❤️ por <a href="https://github.com/RafaelHDSV">RafaelHDSV</a> </p>
