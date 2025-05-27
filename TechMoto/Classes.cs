@@ -103,10 +103,26 @@ namespace TechMoto
             }
         }
 
+        public class Interesse
+        {
+            public Guid _id { get; set; }
+            public Usuario Usuario { get; set; }
+            public Moto Moto { get; set; }
+            public string Telefone { get; set; }
+            public decimal Oferta { get; set; }
+            public string Observacoes { get; set; }
+
+            public Interesse()
+            {
+                _id = Guid.NewGuid();
+            }
+        }
+
         public static class GerenciamentoDeMotos
         {
             public static List<Usuario> listaUsuarios = new List<Usuario>();
             public static List<Moto> listaMotos = new List<Moto>();
+            public static List<Interesse> listaInteresses = new List<Interesse>();
 
             public static void AdicionarUsuario(Usuario usuario)
             {
@@ -202,18 +218,32 @@ namespace TechMoto
                 }
             }
 
-            public static void InformarInteresse(string idMoto, Usuario usuario)
+            public static void InformarInteresse(Interesse interesse)
             {
-                Guid guidId = Guid.Parse(idMoto);
-                var moto = BuscarMoto(guidId);
-                if (moto != null && !moto.ClientesInteressados.Any(u => u._id == usuario._id))
+                if (interesse.Moto != null && !interesse.Moto.ClientesInteressados.Any(u => u._id == interesse.Usuario._id))
                 {
-                    moto.ClientesInteressados.Add(usuario);
-                    MessageBox.Show($"Interesse registrado para a moto: {moto.Modelo}");
+                    interesse.Moto.ClientesInteressados.Add(interesse.Usuario);
+                    listaInteresses.Add(interesse);
+                    MessageBox.Show($"Interesse registrado para a moto: {interesse.Moto.Modelo}");
                 }
                 else
                 {
                     MessageBox.Show("Usuário já está interessado nesta moto ou moto não encontrada.");
+                }
+            }
+
+            public static List<Interesse> BuscarInteresse(Guid motoId)
+            {
+                var moto = listaMotos.FirstOrDefault(m => m._id == motoId);
+                if (moto != null)
+                {
+                    var interessesDaMoto = listaInteresses.Where(i => i.Moto._id == motoId).ToList();
+                    return interessesDaMoto;
+                }
+                else
+                {
+                    MessageBox.Show("Moto não encontrada.");
+                    return new List<Interesse>();
                 }
             }
         }

@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Classes.cs" />
     <Compile Include="Constantes.cs" />
+    <Compile Include="frms\frmListagemInteressados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\frmListagemInteressados.Designer.cs">
+      <DependentUpon>frmListagemInteressados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="components\MotoCard.resx">
       <DependentUpon>MotoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\frmListagemInteressados.resx">
+      <DependentUpon>frmListagemInteressados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

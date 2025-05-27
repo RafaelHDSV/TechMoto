@@ -58,6 +58,7 @@
             this.labelClientesInteressados.TabIndex = 7;
             this.labelClientesInteressados.Text = "Nenhum Interessado";
             this.labelClientesInteressados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelClientesInteressados.Click += new System.EventHandler(this.labelClientesInteressados_Click);
             // 
             // labelKm
             // 

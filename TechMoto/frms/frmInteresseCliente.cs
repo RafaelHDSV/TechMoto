@@ -84,7 +84,18 @@ namespace TechMoto
             string oferta = inputOferta.Text.Replace("R$", "").Replace(".", "").Replace(",", "").Trim();
             string observacoes = inputObservacoes.Text;
 
-            Classes.GerenciamentoDeMotos.InformarInteresse(moto, usuarioLogado);
+            Classes.Moto motoCompleta = Classes.GerenciamentoDeMotos.BuscarMoto(Guid.Parse(moto));
+
+            Classes.Interesse interesse = new Classes.Interesse
+            {
+                Usuario = usuarioLogado,
+                Moto = motoCompleta,
+                Telefone = telefone,
+                Oferta = decimal.Parse(oferta),
+                Observacoes = observacoes,
+            };
+
+            Classes.GerenciamentoDeMotos.InformarInteresse(interesse);
 
             var formListagemAberta = Application.OpenForms.OfType<frmListagemMotos>().FirstOrDefault();
             formListagemAberta?.CarregarMotos();

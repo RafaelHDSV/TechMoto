@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using TechMoto.frms;
 
 namespace TechMoto
 {
@@ -16,6 +17,7 @@ namespace TechMoto
     {
         private Classes.Usuario usuarioLogado;
         private Classes.Moto moto;
+        private List<Classes.Interesse> interesse;
 
         public MotoCard()
         {
@@ -48,7 +50,9 @@ namespace TechMoto
             labelCilindradas.Text = moto.Cilindradas.ToString() + "cc";
             labelPreco.Text = moto.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"));
 
-            string clientesInteressadosMessage = moto.ClientesInteressados.Count > 0 ? moto.ClientesInteressados.Count > 1 ? moto.ClientesInteressados.Count + " Interessados" : moto.ClientesInteressados.Count + " Interessado" : "Nenhum Interessado";
+            this.interesse = Classes.GerenciamentoDeMotos.BuscarInteresse(moto._id);
+
+            string clientesInteressadosMessage = interesse.Count > 0 ? interesse.Count > 1 ? interesse.Count + " Interessados" : interesse.Count + " Interessado" : "Nenhum Interessado";
             labelClientesInteressados.Text = clientesInteressadosMessage;
         }
 
@@ -154,6 +158,24 @@ namespace TechMoto
                 this.Parent.Controls.Remove(this);
 
                 MessageBox.Show("Moto excluída com sucesso!");
+            }
+        }
+
+        private void labelClientesInteressados_Click(object sender, EventArgs e)
+        {
+            var formAberto = Application.OpenForms.OfType<frmListagemInteressados>().FirstOrDefault();
+
+            if (formAberto == null)
+            {
+                frmListagemInteressados frmListagemInteressados = new frmListagemInteressados(interesse);
+                Form parentForm = this.FindForm();
+                frmListagemInteressados.StartPosition = FormStartPosition.CenterParent;
+                frmListagemInteressados.Show(parentForm);
+            }
+            else
+            {
+                formAberto.BringToFront();
+                formAberto.Activate();
             }
         }
     }
