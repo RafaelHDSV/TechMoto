@@ -25,6 +25,25 @@ TechMoto é um sistema desktop desenvolvido em Windows Forms com C#, projetado p
 
 ⚠️ **Observação:** O sistema não utiliza banco de dados permanente - todas as informações são armazenadas apenas em memória e serão perdidas ao fechar a aplicação.
 
+<details>
+  <summary>Usuários para login</summary>
+
+  ```
+  Email = "cliente@gmail.com",
+  Senha = "cliente",
+  ```
+
+  ```
+    Email = "travis@gmail.com",
+    Senha = "fein",
+  ```
+
+  ```
+    Email = "trr@gmail.com",
+    Senha = "take",
+  ```
+</details>
+
 <h2 id="features">✨ Funcionalidades</h2>
 
 - 🏪 **Loja**
